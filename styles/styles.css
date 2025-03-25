@@ -1,0 +1,80 @@
+html {
+  overflow: auto;
+}
+
+body {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  opacity: 1;
+  text-align: center;
+  overflow: hidden;
+}
+body * {
+  -webkit-transition: all 0.3s 0s ease;
+  -moz-transition: all 0.3s 0s ease;
+  -o-transition: all 0.3s 0s ease;
+  -ms-transition: all 0.3s 0s ease;
+  transition: all 0.3s 0s ease !important;
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+body h1, body h2, body h3, body h4, body h5, body h6, body p, body blockquote, body a, body ol, body ul, body li, body hr, body button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+body .frame {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+}
+
+#header .logo {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-indent: -9999px;
+  top: 0px;
+  left: 0px;
+  width: auto;
+  height: auto;
+  z-index: 999;
+}
+#header .logo a {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: auto;
+  height: auto;
+  background-position: center center;
+  background-size: 100%;
+  transform: scale(1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#header .logo a:hover {
+  transform: scale(1.05);
+}
+.default .page-content {
+  min-height: 400px;
+}
+
+@media screen and (max-width: 900px) {
+  .sqs-col-1, .sqs-col-2, .sqs-col-3, .sqs-col-4, .sqs-col-5, .sqs-col-6, .sqs-col-7, .sqs-col-8, .sqs-col-9, .sqs-col-10, .sqs-col-11, .sqs-col-12 {
+    width: 100% !important;
+  }
+}

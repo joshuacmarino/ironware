@@ -1,0 +1,41 @@
+<!-- Index Page -->
+{.section collection}
+
+<!-- Index Sections -->
+{.repeated section collections}
+
+    {.if itemCount}
+
+        <!-- Collection Sections -->
+        <div id="{urlId}" class="index-section collection-section">
+
+            <h2 class="collection-title">{title}</h2>
+
+            {.repeated section items}
+
+                <!-- Collection Items -->
+                <div class="item">
+                    <h3 class="item-title">{title}</h3>
+                    <div class="item-content">{body}</div>
+                </div>
+
+            {.end}
+
+        </div>
+
+        {.or}
+
+        <!-- Page Sections -->
+        <div id="{urlId}" class="index-section page-section">
+
+            <h2 class="page-title">{title}</h2>
+
+            {mainContent}
+
+        </div>
+
+    {.end}
+
+{.end}
+
+{.end}

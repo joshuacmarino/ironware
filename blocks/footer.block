@@ -1,0 +1,31 @@
+<footer id="footer" class="footer">
+
+  <div class="frame">
+
+    <!-- Footer Navigation -->
+    <squarespace:navigation navigationId="nav-footer" template="nav-footer" />
+
+    {.section website}
+
+    <!-- Footer Logo -->
+    <h2 class="footer-logo">{siteTitle}</h2>
+
+    <!-- Social Links -->
+    {.section socialAccounts}
+      <ul class="socials">
+      {.repeated section @}
+      <li class="{screenname}"><a href="{profileUrl}" class="bi-{screenname|slugify}" target="blank"></a></li>
+      {.end}
+      </ul>
+    {.end}
+
+    <!-- Copyright -->
+    <div class="copyright">
+      <p>&copy; <script type="text/javascript">var time = new Date(); document.write(time.getFullYear());</script> {siteTitle}</p>
+    </div>
+
+    {.end}
+
+  </div>
+
+</footer>

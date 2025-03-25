@@ -1,0 +1,50 @@
+<nav class="nav-header">
+
+  <ul class="nav-frame">
+
+  {.repeated section items}
+
+    {.section active}
+
+      <li><a class="active" href="{fullUrl}">{collection.navigationTitle}</a></li>
+
+    {.or}
+
+      {.folder?}
+      <li class="folder"><a href="{collection.fullUrl}">{collection.navigationTitle}</a>
+
+        <ul class="folder-frame">
+        {.repeated section items}
+          {.collection?}
+              <li><a href="{collection.fullUrl}">
+                {collection.navigationTitle}
+              </a></li>
+          {.end}
+          {.section externalLink}
+              <li><a href="{url}"{.section newWindow} target="_blank"{.end}>
+                {title}
+              </a></li>
+          {.end}
+        {.end}
+        </ul>
+
+      </li>
+      {.or}
+
+        {.section collection}
+        <li><a href="{fullUrl}">{navigationTitle}</a></li>
+        {.end}
+
+        {.section externalLink}
+        <li><a href="{url}"{.section newWindow} target="_blank"{.end}>{title}</a></li>
+        {.end}
+
+      {.end}
+
+    {.end}
+
+  {.end}
+
+  </ul>
+
+</nav>

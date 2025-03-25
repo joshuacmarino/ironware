@@ -1,0 +1,21 @@
+<!-- Home Page Content -->
+<main class="page-content"  data-content-field="main-content">
+ 
+      <section class="intro">
+            {.section website}
+            <h1>{siteTagLine}</h1>
+            {.end}
+      </section>
+      
+      <section class="about">
+            <!-- Editable Squarespace Region -->
+            <squarespace:block-field id="about-content" columns="2"/>
+      </section>
+      
+      <section class="cta">
+            <!-- Editable Squarespace Region -->
+            <squarespace:block-field id="cta-content" columns="1" lock-layout="true"/>
+      </section>
+      
+ 
+</main>

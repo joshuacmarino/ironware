@@ -1,0 +1,238 @@
+// Squarespace Template Styles
+// Developed by Joshua Marino © 2025
+
+// COLORS ///////////////////////////////////////////////////////
+
+	$white: rgba(255,255,255,1);
+	$black: rgba(0,0,0,1);
+
+// FONTS ////////////////////////////////////////////////////////
+
+
+// MIXINS ///////////////////////////////////////////////////////
+
+	// Animation
+	@mixin animate ($duration: .3s, $delay: 0s, $easing: ease) {
+		-webkit-transition: all $duration $delay $easing;
+		-moz-transition: all $duration $delay $easing;
+		-o-transition: all $duration $delay $easing;
+		-ms-transition: all $duration $delay $easing;
+		transition: all $duration $delay $easing !important;
+		backface-visibility: hidden;
+		perspective: 1000;
+	}
+	
+	// Pseudo Elements
+	@mixin pseudo {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		@include animate;
+	}
+	
+	// Hide Elements
+	@mixin hidden {
+		display: none;
+		visibility: hidden;
+	}
+	
+	// Non Selectable Text
+	@mixin no-select {
+		-webkit-user-select: none;  
+		-moz-user-select: none;     
+		-ms-user-select: none;      
+		user-select: none; 
+	}
+	
+	// Clear Float
+	@mixin clear {
+		display: block;
+		clear: both;
+	}
+
+	// Frame
+	@mixin frame ($width: 100%, $maxwidth: 100%) {
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		width: $width;
+		max-width: $maxwidth;
+	}
+
+// ANIMATIONS ///////////////////////////////////////////////////
+
+// STYLES //////////////////////////////////////////////////////
+
+	// Global
+	html {
+		overflow: auto;
+	}
+	
+	body {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: auto;
+		margin: 0px;
+		opacity: 1;
+		text-align: center;
+		overflow: hidden;
+		
+		* {
+			@include animate;
+		}
+		
+		h1, h2, h3, h4, h5, h6, p, blockquote, a, ol, ul, li, hr, button {
+			margin: 0;
+			padding: 0;
+			border: none;
+			list-style: none;
+			color: $black;
+			text-decoration: none;	
+		}	
+		
+		.frame {
+			@include frame(100%, 1600px);
+		}
+	}
+
+	// Header
+	#header {
+		
+		.logo {
+			display: block;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			text-indent: -9999px;
+			top: 0px;
+			left: 0px;
+			width: auto;
+			height: auto;
+			z-index: 999; 
+			
+			a {
+				display: block;
+				margin: 0px;
+				padding: 0px;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: auto;
+				height: auto;
+				// background: url('../assets/svgs/logo.svg') no-repeat;
+				background-position: center center;
+				background-size: 100%;
+				transform: scale(1);
+				@include no-select;
+				
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+		}
+		
+		.nav-header {
+	
+		}
+	}
+	
+	// Home Page
+	.home {
+		.page-content {
+			
+		}
+	}
+	
+	// Default Content Page
+	.default {
+		.page-content {
+			min-height: 400px;
+		}
+	}
+	
+	// Footer
+	#footer {
+		
+		.footer-logo {
+			
+		}
+		
+		.nav-footer {
+		
+		}
+		
+		.socials {
+			
+		}
+		
+		.copyright {
+			
+		}
+	}
+
+// SQUARESPACE //////////////////////////////////////////////////
+
+
+// RESPONSIVE ///////////////////////////////////////////////////
+
+	// Laptop
+	@media screen and (max-width: 1200px) {
+	
+	
+	
+	}
+	
+	// Tablet
+	@media screen and (max-width: 900px) {
+	
+		.sqs-col-1, .sqs-col-2, .sqs-col-3, .sqs-col-4, .sqs-col-5, .sqs-col-6, .sqs-col-7, .sqs-col-8, .sqs-col-9, .sqs-col-10, .sqs-col-11, .sqs-col-12 {
+			width: 100% !important;
+		}
+	
+	}
+	
+	// Phone
+	@media screen and (max-width: 600px) {
+	
+	
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	

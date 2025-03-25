@@ -1,0 +1,25 @@
+<nav class="nav-dropdown">
+
+  <ul class="nav-frame">
+
+  {.repeated section items}
+
+  {.section active}
+  <li><a class="active" href="{fullUrl}">{collection.navigationTitle}</a></li>
+  {.or}
+
+    {.section collection}
+      <li><a href="{fullUrl}">{navigationTitle}</a></li>
+    {.end}
+
+    {.section externalLink}
+      <li><a href="{url}"{.section newWindow} target="_blank"{.end}>{title}</a></li>
+    {.end}
+
+  {.end}
+
+  {.end}
+
+  </ul>
+
+</nav>

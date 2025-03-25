@@ -1,0 +1,12 @@
+// SQUARESPACE TWEAKS ///////////////////////////////////////////
+
+// tweak: { "type" : "dropdown", "title" : "Background Color", "options" : [ "Light Gray", "Dark Gray", "White" ], "default" : "Light Gray" }
+body.background-color-light-gray {
+  background-color: #999;
+}
+body.background-color-dark-gray {
+  background-color: #666;
+}
+body.background-color-white {
+  background-color: #FFF;
+}

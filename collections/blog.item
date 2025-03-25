@@ -1,0 +1,81 @@
+
+{.section item}
+
+  <!--WRAPPER-->
+  <article id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
+
+    <!--POST TILE-->
+    <h1 class="title" data-content-field="title">
+      {.passthrough?}
+        <a href="{sourceUrl}" target="_blank">{title}</a>
+      {.or}
+        {title}
+      {.end}
+    </h1>
+
+    <!--AUTHOR AND DATE-->
+    <p class="meta">
+      <a href="{fullUrl}" class="permalink"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a> by <a href="{collection.fullUrl}?author={author.id}">{author.displayName}</a>
+    </p>
+
+    <!--MAIN CONTENT-->
+    {body}
+
+    <!--BLOG INJECTION-->
+    {postItemInjectCode}
+
+    <!--CATEGORIES-->
+    {.repeated section categories}
+      <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with},
+    {.end}
+
+    <!--TAGS-->
+    {.repeated section tags}
+      <a class="tag" href="{collection.fullUrl}?tag={@|url-encode}">{@}</a>{.alternates with},
+    {.end}
+
+    <!--SHARE AND LIKE-->
+    {@|like-button}
+    {@|social-button}
+
+
+    <!--LOCATION-->
+    {.section location}
+      {.section addressTitle}
+        {addressTitle}
+        {addressLine1}
+        {addressLine2}
+        {addressCountry}
+      {.end}
+    {.end}
+
+    <!--COMMENTS-->
+    {@|comments}
+
+  </article>
+
+{.end}
+
+<!-- Pagination -->
+{.section pagination}
+<nav class="pagination">
+
+  <!-- Previous Post -->
+  {.section prevItem}
+  <a href="{pagination.prevPageUrl}">Previous</a>
+  {.or}
+  <a class="disabled">Previous</a>
+  {.end}
+
+  <!-- Divider -->
+  <hr>
+
+  <!-- Next Post -->
+  {.section nextItem}
+  <a href="{pagination.nextPageUrl}">Next</a>
+  {.or}
+  <a class="disabled">Next</a>
+  {.end}
+
+</nav>
+{.end}

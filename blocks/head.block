@@ -1,0 +1,15 @@
+<!-- HTML Document Head -->
+<head>
+      <!-- Metadata -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      
+      <!-- Adobe Fonts -->
+      <link rel="stylesheet" href="https://use.typekit.net/zag1eak.css">
+      
+      <!-- Bootstrap Icons -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      
+      <!-- Squarespace Headers -->
+      {squarespace-headers}
+</head>

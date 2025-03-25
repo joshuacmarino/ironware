@@ -1,0 +1,127 @@
+<aside class="sidebar">
+
+  <div class="frame">
+
+    {.section collection}
+
+      <!-- Recent Posts -->
+      <h2>Recent Posts:</h2>
+      <squarespace:query collection="{urlId}" limit="6">
+      <ul class="posts">
+        {.repeated section items}
+        <li><a href="{fullUrl}">{title}</a></li>
+        {.end}
+      </ul>
+      </squarespace:query>
+
+      <hr>
+
+      <!-- Categories -->
+      <h2>Categories:</h2>
+      {.section categories}
+      <ul class="categories">
+        {.repeated section @}
+        <li><a href="{collection.fullUrl}?category={@|url-encode}" rel="tag">{@}</a>{.alternates with}&nbsp;</li>
+        {.end}
+      </ul>
+      {.end}
+
+      <hr>
+
+      <!-- Tags -->
+      <h2>Tags:</h2>
+      {.section tags}
+      <ul class="tags">
+        {.repeated section @}
+        <li><a href="{collection.fullUrl}?tag={@|url-encode}" rel="tag">{@}</a>{.alternates with}&nbsp;</li>
+        {.end}
+      </ul>
+      {.end}
+
+    {.end}
+
+  </div>
+
+</aside>
+
+
+
+
+
+{.section categoryFilter}
+  <p class="filtered-by">Filtered by Category: {@|safe}</p>
+{.end}
+
+{.section tagFilter}
+  <p class="filtered-by">Filtered by Tag: {@|safe}</p>
+{.end}
+
+{.if authorFilter}
+  <p class="filtered-by">Filtered by Author: {author.displayName}</p>
+{.end}
+
+<!-- Blog Items -->
+{.repeated section items}
+
+  <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
+    <!-- main image (thumbnail) -->
+    {.main-image?}
+      <a href="{fullUrl}" class="main-image content-fill">
+        <img {@|image-meta} />
+      </a>
+    {.end}
+    <!-- post title -->
+    <h1 class="title" data-content-field="title">
+      {.passthrough?}
+        <a href="{sourceUrl}" target="_blank">{title}</a>
+      {.or}
+        <a href="{fullUrl}">{title}</a>
+      {.end}
+    </h1>
+    <!-- excerpt or body -->
+    {.if excerpt}
+      {excerpt}
+      <a class="link" href="{fullUrl}">Read More</a>
+    {.or}
+      {body}
+    {.end}
+  </article>
+
+{.alternates with}
+
+  <!-- Divider -->
+  <hr>
+
+{.or}
+
+  <!-- No Posts -->
+  <article>
+    <h2>So little content, so very sad.</h2>
+    <p>There are no posts in this collection yet.</p>
+  </article>
+
+{.end}
+
+<!-- Pagination -->
+{.if pagination}
+<nav class="pagination">
+
+  <!-- Previous Post -->
+  {.if pagination.prevPage}
+  <a href="{pagination.prevPageUrl}">Previous</a>
+  {.or}
+  <a class="disabled">Previous</a>
+  {.end}
+
+  <!-- Divider -->
+  <hr>
+
+  <!-- Next Post -->
+  {.if pagination.nextPage}
+  <a href="{pagination.nextPageUrl}">Next</a>
+  {.or}
+  <a class="disabled">Next</a>
+  {.end}
+
+</nav>
+{.end}

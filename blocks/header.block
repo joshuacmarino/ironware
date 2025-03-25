@@ -1,0 +1,18 @@
+{.section website}
+<!-- Header -->
+<header id="header" class="header">
+  
+  <div class="frame">
+    
+    <!-- Logo -->
+    <h1 class="logo" data-content-field="site-title">
+      <a href="../">{siteTitle}</a>
+    </h1>
+    
+    <!-- Primary Navigation -->
+    <squarespace:navigation navigationId="nav-header" template="nav-header" />
+    
+  </div>
+  
+</header>
+{.end}
