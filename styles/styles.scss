@@ -3,11 +3,21 @@
 
 // COLORS ///////////////////////////////////////////////////////
 
-	$white: rgba(255,255,255,1);
-	$black: rgba(0,0,0,1);
+	$white: rgba(255,255,255,1);	     // #FFFFFF
+	$black: rgba(0,0,0,1);	             // #000000
 
-// FONTS ////////////////////////////////////////////////////////
+	$very-dark: rgba(33, 33, 33, 1);     // #212121
+	$dark: rgba(65, 64, 66, 1);          // #414042
+	$light: rgba(209, 202, 186, 1);      // #D1CABA
+	$natural: rgba(197, 186, 167, 1);    // #C5BBA7
+	$clay: rgba(99, 92, 80, 1);          // #635C50
+	$gray: rgba(137, 146, 151, 1);       // #899297
+	$rust: rgba(222, 117, 20, 1);        // #DE7514
 
+// TYPEFACES ///////////////////////////////////////////////////////
+
+	$crimson: 'Crimson Text', Georgia, serif;
+	$montserrat: 'Montserrat', Helvetica, Arial, sans-serif;
 
 // MIXINS ///////////////////////////////////////////////////////
 
@@ -21,7 +31,7 @@
 		backface-visibility: hidden;
 		perspective: 1000;
 	}
-	
+
 	// Pseudo Elements
 	@mixin pseudo {
 		content: '';
@@ -35,25 +45,11 @@
 		z-index: 1;
 		@include animate;
 	}
-	
-	// Hide Elements
-	@mixin hidden {
-		display: none;
-		visibility: hidden;
-	}
-	
-	// Non Selectable Text
-	@mixin no-select {
-		-webkit-user-select: none;  
-		-moz-user-select: none;     
-		-ms-user-select: none;      
-		user-select: none; 
-	}
-	
-	// Clear Float
-	@mixin clear {
-		display: block;
-		clear: both;
+
+	// Fluid Type
+	@mixin fontsize ($size: 1rem) {
+		font-size: $size;
+		line-height: $size * 1.6;
 	}
 
 	// Frame
@@ -65,6 +61,26 @@
 		max-width: $maxwidth;
 	}
 
+	// Hidden Elements
+	@mixin hidden {
+		display: none;
+		visibility: hidden;
+	}
+
+	// Non Selectable Text
+	@mixin no-select {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	// Clear Float
+	@mixin clear {
+		display: block;
+		clear: both;
+	}
+
 // ANIMATIONS ///////////////////////////////////////////////////
 
 // STYLES //////////////////////////////////////////////////////
@@ -72,8 +88,11 @@
 	// Global
 	html {
 		overflow: auto;
+		font-size: 16px;
+		font-size: clamp(1rem, 1vw + 0.4rem, 1.6rem);
+		line-height: 1.6rem;
 	}
-	
+
 	body {
 		display: block;
 		position: relative;
@@ -83,20 +102,30 @@
 		opacity: 1;
 		text-align: center;
 		overflow: hidden;
-		
+
 		* {
 			@include animate;
+			font-family: $montserrat;
+			font-weight: 400;
 		}
-		
+
 		h1, h2, h3, h4, h5, h6, p, blockquote, a, ol, ul, li, hr, button {
 			margin: 0;
 			padding: 0;
 			border: none;
 			list-style: none;
 			color: $black;
-			text-decoration: none;	
-		}	
-		
+			text-decoration: none;
+		}
+
+		h1, h2 {
+			font-family: $crimson;
+			font-style: italic;
+			text-transform: uppercase;
+			letter-spacing: .08rem;
+			@include fontsize(1.4rem);
+		}
+
 		.frame {
 			@include frame(100%, 1600px);
 		}
@@ -104,7 +133,7 @@
 
 	// Header
 	#header {
-		
+
 		.logo {
 			display: block;
 			margin: 0;
@@ -115,8 +144,8 @@
 			left: 0px;
 			width: auto;
 			height: auto;
-			z-index: 999; 
-			
+			z-index: 999;
+
 			a {
 				display: block;
 				margin: 0px;
@@ -131,50 +160,64 @@
 				background-size: 100%;
 				transform: scale(1);
 				@include no-select;
-				
+
 				&:hover {
 					transform: scale(1.05);
 				}
 			}
 		}
-		
+
 		.nav-header {
-	
+
 		}
 	}
-	
+
 	// Home Page
 	.home {
 		.page-content {
-			
+			min-height: 400px;
 		}
 	}
-	
+
 	// Default Content Page
 	.default {
 		.page-content {
 			min-height: 400px;
 		}
 	}
-	
+
 	// Footer
 	#footer {
-		
-		.footer-logo {
-			
+
+		.ctas {
+			.shop {
+
+			}
+
+			.register {
+
+			}
+
+			.contact {
+
+			}
 		}
-		
-		.nav-footer {
-		
+
+		.newsletter-signup {
+
 		}
-		
-		.socials {
-			
+
+
+		.etc {
+			.copyright {
+				@include fontsize(.8rem)
+			}
+
+			.socials {
+
+			}
 		}
-		
-		.copyright {
-			
-		}
+
 	}
 
 // SQUARESPACE //////////////////////////////////////////////////
@@ -184,25 +227,25 @@
 
 	// Laptop
 	@media screen and (max-width: 1200px) {
-	
-	
-	
+
+
+
 	}
-	
+
 	// Tablet
 	@media screen and (max-width: 900px) {
-	
+
 		.sqs-col-1, .sqs-col-2, .sqs-col-3, .sqs-col-4, .sqs-col-5, .sqs-col-6, .sqs-col-7, .sqs-col-8, .sqs-col-9, .sqs-col-10, .sqs-col-11, .sqs-col-12 {
 			width: 100% !important;
 		}
-	
+
 	}
-	
+
 	// Phone
 	@media screen and (max-width: 600px) {
-	
-	
-		
+
+
+
 	}
 
 
@@ -232,7 +275,6 @@
 
 
 
-	
-	
-	
-	
+
+
+
