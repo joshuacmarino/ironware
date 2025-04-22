@@ -209,7 +209,7 @@
 					.sqs-gallery {
 						position: absolute;
 						width: 100%;
-						top: -44vw;
+						top: -46vw;
 						left: 0px;
 						background-color: $very-dark;
 
@@ -218,9 +218,7 @@
 
 							&:after {
 								@include pseudo();
-								top: 22vw;
-								bottom: 22vw;
-								background: linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.1) 100%);
+								background: linear-gradient(180deg, rgba(0,0,0,.5) 30%, rgba(0,0,0,.1) 70%);
 								opacity: .8;
 							}
 

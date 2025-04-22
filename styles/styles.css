@@ -118,7 +118,7 @@ body .frame {
 .home .page-content .banner .sqs-gallery-container .sqs-gallery {
   position: absolute;
   width: 100%;
-  top: -44vw;
+  top: -46vw;
   left: 0px;
   background-color: rgb(33, 33, 33);
 }
@@ -148,9 +148,7 @@ body .frame {
   transition: all 0.3s 0s ease !important;
   backface-visibility: hidden !important;
   perspective: 1000 !important;
-  top: 22vw;
-  bottom: 22vw;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0.1) 70%);
   opacity: 0.8;
 }
 .home .page-content .banner .sqs-gallery-container .sqs-gallery .slide .meta {
