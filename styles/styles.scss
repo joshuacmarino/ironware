@@ -329,12 +329,8 @@
 			padding: 5vh 0;
 
 			h2, p {
-				margin: 0 auto;
+				margin: 0 auto 12px;
 				max-width: 400px;
-			}
-
-			h2 {
-				margin-bottom: 12px;
 			}
 
 			.newsletter-block {
@@ -349,6 +345,7 @@
 
 					.newsletter-form-field-wrapper {
 						width: 350px;
+						padding: 0px;
 
 					}
 
@@ -359,6 +356,7 @@
 
 						font-family: $montserrat;
 						@include fontsize(.6rem);
+						line-height: 19px !important;
 						text-transform: uppercase;
 						letter-spacing: .03rem;
 					}
@@ -372,9 +370,7 @@
 						padding: 0;
 
 						.newsletter-form-button {
-
 							opacity: 1 !important;
-
 							padding: 1px 64px 5px 24px;
 							background-color: $rust;
 							border-radius: 4px;
@@ -384,7 +380,7 @@
 								@include pseudo();
 								width: 34px;
 								height: 13px;
-								top: 18px;
+								top: unquote('~"calc(50% - 6.5px)"');
 								bottom: unset;
 								left: unset;
 								right: 22px;
@@ -404,6 +400,7 @@
 							.newsletter-form-button-label {
 								font-family: $crimson;
 								@include fontsize(1.1rem);
+								line-height: 38px !important;
 								text-transform: lowercase;
 								font-style: italic;
 							}
