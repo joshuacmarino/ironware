@@ -1,8 +1,11 @@
 html {
   overflow: auto;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: clamp(1rem, 1vw + 0.4rem, 1.4rem);
   line-height: 1.6rem;
+  word-spacing: 0rem;
+  background-color: rgb(33, 33, 33);
 }
 
 body {
@@ -14,6 +17,7 @@ body {
   opacity: 1;
   text-align: center;
   overflow: hidden;
+  background-color: rgb(33, 33, 33);
 }
 body * {
   -webkit-transition: all 0.3s 0s ease;
@@ -50,14 +54,20 @@ body .frame {
   max-width: 1600px;
 }
 
+#header {
+  display: block;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
 #header .logo {
   display: block;
   margin: 0;
   padding: 0;
   position: absolute;
   text-indent: -9999px;
-  top: 0px;
-  left: 0px;
+  top: 40px;
+  left: 60px;
   width: auto;
   height: auto;
   z-index: 999;
@@ -69,8 +79,9 @@ body .frame {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: auto;
-  height: auto;
+  width: 200px;
+  height: 33px;
+  background: url("../assets/svgs/ironware-logo.svg") no-repeat;
   background-position: center center;
   background-size: 100%;
   transform: scale(1);
@@ -80,25 +91,38 @@ body .frame {
   user-select: none;
 }
 #header .logo a:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 .home .page-content {
   min-height: 400px;
 }
-.home .page-content .sqs-gallery-container {
+.home .page-content .section-title {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  background-color: rgb(99, 92, 80);
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 0.6rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  word-spacing: 0.1rem;
+  color: rgb(255, 255, 255);
+}
+.home .page-content .banner .sqs-gallery-container {
   width: 100%;
   height: 60vw;
   position: relative;
   overflow: hidden;
 }
-.home .page-content .sqs-gallery-container .sqs-gallery {
+.home .page-content .banner .sqs-gallery-container .sqs-gallery {
   position: absolute;
   width: 100%;
   top: -44vw;
   left: 0px;
   background-color: rgb(33, 33, 33);
 }
-.home .page-content .sqs-gallery-container .sqs-gallery .slide {
+.home .page-content .banner .sqs-gallery-container .sqs-gallery .slide {
   -webkit-transition: all 0.5s 0s ease;
   -moz-transition: all 0.5s 0s ease;
   -o-transition: all 0.5s 0s ease;
@@ -107,12 +131,35 @@ body .frame {
   backface-visibility: hidden !important;
   perspective: 1000 !important;
 }
-.home .page-content .sqs-gallery-container .sqs-gallery .slide .meta {
+.home .page-content .banner .sqs-gallery-container .sqs-gallery .slide:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-transition: all 0.3s 0s ease;
+  -moz-transition: all 0.3s 0s ease;
+  -o-transition: all 0.3s 0s ease;
+  -ms-transition: all 0.3s 0s ease;
+  transition: all 0.3s 0s ease !important;
+  backface-visibility: hidden !important;
+  perspective: 1000 !important;
+  top: 22vw;
+  bottom: 22vw;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.1) 100%);
+  opacity: 0.8;
+}
+.home .page-content .banner .sqs-gallery-container .sqs-gallery .slide .meta {
   max-width: 60vw !important;
   margin-left: -30vw !important;
   background: none;
+  z-index: 10;
 }
-.home .page-content .sqs-gallery-container .sqs-gallery .slide .meta .meta-title {
+.home .page-content .banner .sqs-gallery-container .sqs-gallery .slide .meta .meta-title {
   font-family: "Crimson Text", Georgia, serif;
   font-style: italic;
   text-transform: uppercase;
@@ -121,13 +168,19 @@ body .frame {
   line-height: 2.6rem;
   line-height: 2.2rem;
 }
+.home .page-content .collections h3.section-title {
+  background-color: rgb(99, 92, 80);
+}
+.home .page-content .featured h3.section-title {
+  background-color: rgb(137, 146, 151);
+}
 
 .default .page-content {
   min-height: 400px;
 }
 
 #footer {
-  padding: 10vh 5vw 15vh;
+  padding: 8vh 5vw 16vh;
   background-color: rgb(33, 33, 33);
 }
 #footer h1, #footer h2, #footer h3, #footer p, #footer ul, #footer ol, #footer a {

@@ -6,15 +6,21 @@
             <squarespace:block-field id="banner-slideshow" columns="1"/>
       </section>
 
+      <section class="collections">
+            <h3 class="section-title">Shop Our Collections</h3>
+            <!-- Editable Squarespace Region -->
+            <squarespace:block-field id="section-collections" columns="1"/>
+      </section>
+
+      <section class="featured">
+            <h3 class="section-title">Featured From Our Forge</h3>
+            <!-- Editable Squarespace Region -->
+            <squarespace:block-field id="section-featured" columns="1"/>
+      </section>
+
       <section class="about">
             <!-- Editable Squarespace Region -->
-            <squarespace:block-field id="about-content" columns="2"/>
+            <squarespace:block-field id="section-about" columns="1"/>
       </section>
-
-      <section class="cta">
-            <!-- Editable Squarespace Region -->
-            <squarespace:block-field id="cta-content" columns="1" lock-layout="true"/>
-      </section>
-
 
 </main>
