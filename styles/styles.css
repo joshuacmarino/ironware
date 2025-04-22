@@ -21,8 +21,8 @@ body * {
   -o-transition: all 0.3s 0s ease;
   -ms-transition: all 0.3s 0s ease;
   transition: all 0.3s 0s ease !important;
-  backface-visibility: hidden;
-  perspective: 1000;
+  backface-visibility: hidden !important;
+  perspective: 1000 !important;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
@@ -83,8 +83,43 @@ body .frame {
   transform: scale(1.05);
 }
 .home .page-content {
-  display: none;
   min-height: 400px;
+}
+.home .page-content .sqs-gallery-container {
+  width: 100%;
+  height: 60vw;
+  position: relative;
+  overflow: hidden;
+}
+.home .page-content .sqs-gallery-container .sqs-gallery {
+  position: absolute;
+  width: 100%;
+  top: -44vw;
+  left: 0px;
+  background-color: rgb(33, 33, 33);
+}
+.home .page-content .sqs-gallery-container .sqs-gallery .slide {
+  -webkit-transition: all 0.5s 0s ease;
+  -moz-transition: all 0.5s 0s ease;
+  -o-transition: all 0.5s 0s ease;
+  -ms-transition: all 0.5s 0s ease;
+  transition: all 0.5s 0s ease !important;
+  backface-visibility: hidden !important;
+  perspective: 1000 !important;
+}
+.home .page-content .sqs-gallery-container .sqs-gallery .slide .meta {
+  max-width: 60vw !important;
+  margin-left: -30vw !important;
+  background: none;
+}
+.home .page-content .sqs-gallery-container .sqs-gallery .slide .meta .meta-title {
+  font-family: "Crimson Text", Georgia, serif;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  font-size: 1.3rem;
+  line-height: 2.6rem;
+  line-height: 2.2rem;
 }
 
 .default .page-content {
@@ -144,8 +179,8 @@ body .frame {
   -o-transition: all 0.2s 0s ease;
   -ms-transition: all 0.2s 0s ease;
   transition: all 0.2s 0s ease !important;
-  backface-visibility: hidden;
-  perspective: 1000;
+  backface-visibility: hidden !important;
+  perspective: 1000 !important;
 }
 #footer .ctas div a h2, #footer .ctas div a p {
   display: inline-block;
@@ -178,8 +213,8 @@ body .frame {
   -o-transition: all 0.3s 0s ease;
   -ms-transition: all 0.3s 0s ease;
   transition: all 0.3s 0s ease !important;
-  backface-visibility: hidden;
-  perspective: 1000;
+  backface-visibility: hidden !important;
+  perspective: 1000 !important;
   background-color: rgb(197, 186, 167);
   width: 2px;
   height: 16vw;
@@ -230,6 +265,9 @@ body .frame {
   margin: 0 auto 12px;
   max-width: 400px;
 }
+#footer .newsletter-signup p {
+  opacity: 0.7;
+}
 #footer .newsletter-signup .newsletter-block .newsletter-form-header {
   display: none;
 }
@@ -242,13 +280,13 @@ body .frame {
   padding: 0px;
 }
 #footer .newsletter-signup .newsletter-block .newsletter-form-wrapper .newsletter-form-field-element {
-  padding: 11px 16px 12px;
+  padding: 12px 16px 12px 18px;
   border-radius: 4px;
   overflow: hidden;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 0.6rem;
   line-height: 1.2rem;
-  line-height: 19px !important;
+  line-height: 18px !important;
   text-transform: uppercase;
   letter-spacing: 0.03rem;
 }
@@ -281,8 +319,8 @@ body .frame {
   -o-transition: all 0.3s 0s ease;
   -ms-transition: all 0.3s 0s ease;
   transition: all 0.3s 0s ease !important;
-  backface-visibility: hidden;
-  perspective: 1000;
+  backface-visibility: hidden !important;
+  perspective: 1000 !important;
   width: 34px;
   height: 13px;
   top: ~"calc(50% - 6.5px)";
@@ -374,8 +412,8 @@ body .frame {
   -o-transition: all 0.3s 0s ease;
   -ms-transition: all 0.3s 0s ease;
   transition: all 0.3s 0s ease !important;
-  backface-visibility: hidden;
-  perspective: 1000;
+  backface-visibility: hidden !important;
+  perspective: 1000 !important;
   content: "/";
   width: auto;
   text-indent: 0px;
@@ -396,6 +434,10 @@ body .frame {
 }
 #footer .etc .nav-footer li a:hover {
   color: rgb(222, 117, 20);
+}
+
+.grecaptcha-badge {
+  display: none !important;
 }
 
 @media screen and (max-width: 900px) {
