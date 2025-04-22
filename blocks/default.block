@@ -11,7 +11,7 @@
       <h1 class="page-title">{title}</h1>
 
       <!-- Page Submenu -->
-      <squarespace:folder-navigation template="nav-dropdown" />
+      <squarespace:folder-navigation template="nav-submenu" />
 
 </section>
 {.end}
