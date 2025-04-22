@@ -6,6 +6,7 @@
     <div class="ctas">
       <div class="shop">
         <a href="../shop">
+        {@|apply svg-icon-magnify.block}
         <h2>Shop</h2>
         <p>Explore our entire catalog of custom crafted lighting, furniture, &amp; home decor products.</p>
         </a>
@@ -13,6 +14,7 @@
 
       <div class="register">
         <a href="../register">
+        {@|apply svg-icon-user.block}
         <h2>Register</h2>
         <p>Apply for exclusive access to partner-only pricing &amp; resources for designers and architects.</p>
         </a>
@@ -20,6 +22,7 @@
 
       <div class="contact">
         <a href="../contact">
+        {@|apply svg-icon-email.block}
         <h2>Contact</h2>
         <p>Email our team to request customization &amp; installation details for any of our products.</p>
         </a>
@@ -43,16 +46,18 @@
       <!-- Copyright -->
       <div class="copyright">
         <p>All designs by &copy; {siteTitle} International, Inc.</p>
-        <p class="small-print">All Ironware products are hand-forged so dimensions may vary slightly.</p>
+        <p class="small-print">All Ironware products are hand-forged, dimensions may vary slightly.</p>
       </div>
 
       <!-- Social Links -->
       {.section socialAccounts}
-      <ul class="socials">
-        {.repeated section @}
-        <li class="{screenname}"><a href="{profileUrl}" class="bi-{screenname|slugify}" target="blank"></a></li>
-        {.end}
-      </ul>
+      <div class="socials">
+        <ul>
+          {.repeated section @}
+          <li class="{screenname}"><a href="{profileUrl}" class="bi-{screenname|slugify}" target="blank"></a></li>
+          {.end}
+        </ul>
+      </div>
       {.end}
 
       {.end}
