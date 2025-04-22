@@ -17,6 +17,54 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/assets\/fonts\/CrimsonText-Italic.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/CrimsonText-Italic.ttf",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/CrimsonText-Italic.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/CrimsonText-Italic.woff",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/CrimsonText-Italic.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/CrimsonText-Italic.woff2",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/CrimsonText-Regular.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/CrimsonText-Regular.ttf",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/CrimsonText-Regular.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/CrimsonText-Regular.woff",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/CrimsonText-Regular.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/CrimsonText-Regular.woff2",
+      "oF" : 0
+    },
     "\/assets\/svgs\/button-arrow.svg" : {
       "ft" : 2097152,
       "miP" : 0,

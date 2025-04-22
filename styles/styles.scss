@@ -20,6 +20,22 @@
 	$crimson: 'Crimson Text', Georgia, serif;
 	$montserrat: 'Montserrat', Helvetica, Arial, sans-serif;
 
+	@font-face {
+		font-family: 'Crimson Text';
+		src: url('../assets/fonts/CrimsonText-Regular.woff2') format('woff2'),
+			 url('../assets/fonts/CrimsonText-Regular.woff') format('woff'),
+			 url('../assets/fonts/CrimsonText-Regular.ttf') format('truetype');
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'Crimson Text';
+		src: url('../assets/fonts/CrimsonText-Italic.woff2') format('woff2'),
+			 url('../assets/fonts/CrimsonText-Italic.woff') format('woff'),
+			 url('../assets/fonts/CrimsonText-Italic.ttf') format('truetype');
+		font-style: italic;
+	}
+
 // MIXINS ///////////////////////////////////////////////////////
 
 	// Animation
