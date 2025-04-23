@@ -261,6 +261,7 @@
 	.home {
 		.page-content {
 			min-height: 400px;
+			background-color: $white;
 
 			.section-title {
 				display: block;
@@ -493,7 +494,6 @@
 
 			.featured {
 				margin-bottom: 60px;
-				background-color: $white;
 
 				h3.section-title {
 					margin-bottom: 40px;
