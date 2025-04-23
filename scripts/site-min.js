@@ -1,1 +1,1 @@
-$(document).ready((function(){$(".logo").click((function(){window.location="../home"}))}));
+function loadAllImages(){var e=document.querySelectorAll("img[data-src]");setTimeout((function(){for(var o=0;o<e.length;o++)ImageLoader.load(e[o],{load:!0})}),400)}$(document).ready((function(){$(".logo").click((function(){window.location="../home"}))})),document.addEventListener("DOMContentLoaded",loadAllImages),window.addEventListener("resize",loadAllImages);
