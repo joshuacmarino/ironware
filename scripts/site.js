@@ -22,7 +22,7 @@ function loadAllImages() {
     for (var i = 0; i < images.length; i++) {
       ImageLoader.load(images[i], {load: true});
     }
-  }, 400)
+  }, 100)
 
 }
 
