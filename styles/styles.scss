@@ -501,7 +501,7 @@
 						.summary-thumbnail-container {
 							margin: 0 !important;
 							opacity: 0;
-							@include show(.2s, .7s);
+							@include show(.2s, .5s);
 
 							&:before {
 								@include pseudo();
