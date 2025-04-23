@@ -188,8 +188,7 @@ body .frame {
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   font-size: 1.3rem;
-  line-height: 2.6rem;
-  line-height: 2.2rem;
+  line-height: 2.34rem;
 }
 .home .page-content .collections {
   background-color: rgb(99, 92, 80);
@@ -203,6 +202,14 @@ body .frame {
 }
 .home .page-content .collections .gallery-block .slide {
   position: relative;
+}
+.home .page-content .collections .gallery-block .slide .margin-wrapper {
+  position: relative;
+  background-color: rgba(65, 64, 66, 0.35);
+}
+.home .page-content .collections .gallery-block .slide .margin-wrapper a {
+  display: block;
+  position: relative;
   opacity: 0;
   -webkit-animation: show 0.5s 1s ease 1;
   -moz-animation: show 0.5s 1s ease 1;
@@ -210,14 +217,6 @@ body .frame {
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
-}
-.home .page-content .collections .gallery-block .slide .margin-wrapper {
-  position: relative;
-}
-.home .page-content .collections .gallery-block .slide .margin-wrapper a {
-  display: block;
-  position: relative;
-  background-color: rgb(209, 202, 186);
 }
 .home .page-content .collections .gallery-block .slide .margin-wrapper a:before {
   content: "";
@@ -271,6 +270,13 @@ body .frame {
   transform: translateY(-2.2rem);
   z-index: 10;
   pointer-events: none;
+  opacity: 0;
+  -webkit-animation: show 0.5s 1s ease 1;
+  -moz-animation: show 0.5s 1s ease 1;
+  animation: show 0.5s 1s ease 1;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
   color: rgb(255, 255, 255);
   font-family: "Crimson Text", Georgia, serif;
   font-style: italic;
@@ -370,6 +376,9 @@ body .frame {
   letter-spacing: 0.08rem;
   word-spacing: 0.1rem;
   color: rgb(255, 255, 255);
+}
+.home .page-content .collections .image-block:hover .image-caption-wrapper .image-caption p {
+  color: rgb(209, 202, 186);
 }
 .home .page-content .featured h3.section-title {
   background-color: rgb(137, 146, 151);

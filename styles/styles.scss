@@ -64,9 +64,9 @@
 	}
 
 	// Fluid Type
-	@mixin fontsize ($size: 1rem) {
+	@mixin fontsize ($size: 1rem, $multiplier: 2) {
 		font-size: $size;
-		line-height: $size * 2;
+		line-height: $size * $multiplier;
 	}
 
 	// Frame
@@ -266,8 +266,8 @@
 									font-style: italic;
 									text-transform: uppercase;
 									letter-spacing: .08rem;
-									@include fontsize(1.3rem);
-									line-height: 2.2rem;
+									@include fontsize(1.3rem, 1.8);
+
 
 								}
 							}
@@ -290,16 +290,16 @@
 
 					.slide {
 						position: relative;
-						opacity: 0;
-						@include show(.5s, 1s);
 
 						.margin-wrapper {
 							position: relative;
+							background-color: rgba(65, 64, 66, .35);
 
 							a {
 								display: block;
 								position: relative;
-								background-color: $light;
+								opacity: 0;
+								@include show(.5s, 1s);
 
 								&:before {
 									@include pseudo();
@@ -338,6 +338,8 @@
 								transform: translateY(-2.2rem);
 								z-index: 10;
 								pointer-events: none;
+								opacity: 0;
+								@include show(.5s, 1s);
 
 								color: $white;
 								font-family: $crimson;
@@ -354,7 +356,6 @@
 
 				.image-block {
 					padding: 0 !important;
-
 
 					.sqs-block-image-figure {
 						position: relative;
@@ -432,6 +433,16 @@
 							 }
 						}
 
+					}
+
+					&:hover {
+						.image-caption-wrapper {
+							.image-caption {
+								p {
+									color: $light;
+								}
+							}
+						}
 					}
 				}
 			}
