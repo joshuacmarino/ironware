@@ -169,6 +169,22 @@
 		.frame {
 			@include frame(100%, 1600px);
 		}
+
+		.cursor {
+			display: block;
+			position: fixed;
+			height: 32px;
+			width: 32px;
+			border-radius: 32px;
+			background-color: $rust;
+			transform: translate(-50%, -50%);
+			transform-origin: top left;
+			z-index: 9999;
+		}
+
+		.click {
+		  scale: 0.8;
+		}
 	}
 
 	// Header

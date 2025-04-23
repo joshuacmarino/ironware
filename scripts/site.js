@@ -4,6 +4,21 @@
 // CUSTOM FUNCTIONS
 
 
+// CUSTOM CURSOR
+const cursor = document.querySelector(".cursor");
+
+// Position cursor div to cursor position
+document.addEventListener("mousemove", (e) => {
+  let x = e.clientX;
+  let y = e.clientY;
+  cursor.style.left = x + "px";
+  cursor.style.top = y + "px";
+});
+
+// Add 'click' class to cursor on mouse down and remove on mouse up
+document.addEventListener("mousedown", (e) => cursor.classList.add("click"));
+document.addEventListener("mouseup", (e) => cursor.classList.remove("click"));
+
 // PAGE LOAD FUNCTIONS
 $(document).ready(function () {
 
