@@ -149,6 +149,14 @@
       "oAP" : "\/blocks\/nav-submenu.block",
       "oF" : 0
     },
+    "\/blocks\/scripts.block" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/scripts.block",
+      "oF" : 0
+    },
     "\/blocks\/svg-icon-email.block" : {
       "cB" : 0,
       "ft" : 8192,

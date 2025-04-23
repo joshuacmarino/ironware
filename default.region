@@ -16,7 +16,7 @@
       {@|apply footer.block}
 
       <!-- Javascript -->
-      {@|apply js.block}
+      {@|apply scripts.block}
 
       <!-- Squarespace Footers -->
       {squarespace-footers}

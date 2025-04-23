@@ -6,9 +6,9 @@
 
 // PAGE LOAD FUNCTIONS
 $(document).ready(function () {
-  
+
   // Link Logo to Homepage Function
-  $('.logo').click(function(){ 
+  $('.logo').click(function(){
     window.location = '../home';
   });
 
@@ -23,7 +23,11 @@ function loadAllImages() {
 }
 
 // LOAD IMAGES ON PAGE LOAD
-document.addEventListener('DOMContentLoaded', loadAllImages);
+document.addEventListener('DOMContentLoaded', function () {
+  setTimeout(function() {
+    loadAllImages();
+  }, 100)
+});
 
 // RELOAD IMAGES ON WINDOW RESIZE
 window.addEventListener('resize', loadAllImages);
