@@ -21,11 +21,11 @@ document.addEventListener("mouseup", (e) => cursor.classList.remove("click"));
 
 // Show custom cursor only over certain elements
 [document.querySelector('.home .collections .gallery-block'), document.querySelector('.home .collections .image-block'), document.querySelector('.footer .ctas')].forEach(item => {
-  item.addEventListener('mouseover', function () {
+  item?.addEventListener('mouseover', function () {
     cursor.classList.add('active');
   });
 
-  item.addEventListener('mouseout', function () {
+  item?.addEventListener('mouseout', function () {
     cursor.classList.remove('active');
   });
 
