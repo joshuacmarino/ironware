@@ -349,15 +349,15 @@
       "pg" : 0
     },
     "\/styles\/tweaks.css" : {
-      "aP" : 1,
+      "aP" : 0,
       "bl" : 0,
       "ci" : 0,
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/styles\/tweaks-min.css",
-      "oF" : 0,
+      "oF" : 1,
       "pg" : 0
     },
     "\/template.conf" : {

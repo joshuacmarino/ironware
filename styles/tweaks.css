@@ -1,6 +1,6 @@
 // SQUARESPACE TWEAKS ///////////////////////////////////////////
 
-// tweak: { "type" : "dropdown", "title" : "Background Color", "options" : [ "Light Gray", "Dark Gray", "White" ], "default" : "Light Gray" }
+// tweak: { "type" : "dropdown", "title" : "Background Color", "options" : [ "Light", "Dark", "White" ], "default" : "Light" }
 
 body.background-color-light {
   background-color: rgba(209, 202, 186, 1);
