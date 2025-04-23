@@ -449,7 +449,7 @@ body .frame {
   font-size: 0.8rem;
   line-height: 1.44rem;
   font-weight: 300;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.01rem;
   color: rgb(209, 202, 186);
 }
 .home .page-content .posts .summary-block-wrapper .summary-item .summary-content .summary-excerpt p a {
