@@ -26,7 +26,7 @@ function loadAllImages() {
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(function() {
     loadAllImages();
-  }, 100)
+  }, 200)
 });
 
 // RELOAD IMAGES ON WINDOW RESIZE
