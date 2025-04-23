@@ -405,7 +405,7 @@
 								 overflow: hidden;
 
 								 font-family: $montserrat;
-								 @include fontsize(.8rem);
+								 @include fontsize(.7rem);
 								 text-transform: uppercase;
 								 letter-spacing: .08rem;
 								 word-spacing: .1rem;
@@ -765,7 +765,6 @@
 }
 .sqs-gallery-block-grid img {
 	opacity: 0;
-	@include animate(0s, .2s, ease)
 }
 
 // RESPONSIVE ///////////////////////////////////////////////////

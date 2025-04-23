@@ -14,20 +14,4 @@ $(document).ready(function () {
 
 });
 
-// SQUARESPACE IMAGE LOADER
-function loadAllImages() {
-  var images = document.querySelectorAll('img[data-src]' );
-  for (var i = 0; i < images.length; i++) {
-    ImageLoader.load(images[i], {load: true});
-  }
-}
 
-// LOAD IMAGES ON PAGE LOAD
-document.addEventListener('DOMContentLoaded', function () {
-  setTimeout(function() {
-    loadAllImages();
-  }, 200)
-});
-
-// RELOAD IMAGES ON WINDOW RESIZE
-window.addEventListener('resize', loadAllImages);
