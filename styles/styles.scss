@@ -12,7 +12,7 @@
 	$natural: rgba(197, 186, 167, 1);    // #C5BBA7
 	$clay: rgba(99, 92, 80, 1);          // #635C50
 	$gray: rgba(137, 146, 151, 1);       // #899297
-	$rust: rgba(222, 117, 20, 1);
+	$rust: rgba(222, 117, 20, 1);		  // #DE7514
 	$light-rust: rgba(255, 147, 47, 1);  // #FF922E
 
 // TYPEFACES ///////////////////////////////////////////////////////
@@ -35,6 +35,13 @@
 			 url('../assets/fonts/CrimsonText-Italic.ttf') format('truetype');
 		font-style: italic;
 	}
+
+// ANIMATIONS ///////////////////////////////////////////////////
+
+	// Show
+	@-webkit-keyframes show {to {opacity: 1;}}
+	@-moz-keyframes show {to {opacity: 1;}}
+	@keyframes show {to {opacity: 1;}}
 
 // MIXINS ///////////////////////////////////////////////////////
 
@@ -110,12 +117,7 @@
 	}
 
 
-// ANIMATIONS ///////////////////////////////////////////////////
 
-// Reveal Animation
-@-webkit-keyframes show {to {opacity: 1;}}
-@-moz-keyframes show {to {opacity: 1;}}
-@keyframes show {to {opacity: 1;}}
 
 // STYLES //////////////////////////////////////////////////////
 
@@ -448,9 +450,41 @@
 			}
 
 			.featured {
+				margin-bottom: 60px;
+
 				h3.section-title {
+					margin-bottom: 40px;
 					background-color: $gray;
 				}
+
+				.gallery-block {
+					display: block;
+					margin: 0 auto 40px;
+					width: 80%;
+
+
+					.sqs-gallery-container {
+						border-radius: 4px 4px 0 0;
+						overflow: hidden;
+					}
+
+					.sqs-gallery-thumbnails {
+						border-radius: 0 0 4px 4px;
+						overflow: hidden;
+					}
+				}
+
+				h1 {
+					margin: 0 auto;
+					max-width: 40vw;
+					@include fontsize(1.2rem, 1.4);
+					letter-spacing: .06rem;
+					word-spacing: .06rem;
+				}
+			}
+
+			.about {
+
 			}
 
 		}
@@ -708,11 +742,13 @@
 			}
 
 			.copyright {
+				width: 38%;
 				text-align: left;
 				@include fontsize(.8rem);
 			}
 
 			.socials {
+				width: 24%;
 
 				ul {
 					display: inline-block;
@@ -738,6 +774,7 @@
 			}
 
 			.nav-footer {
+				width: 38%;
 				position: relative;
 				float: right;
 				text-align: right;

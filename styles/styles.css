@@ -380,10 +380,34 @@ body .frame {
 .home .page-content .collections .image-block:hover .image-caption-wrapper .image-caption p {
   color: rgb(209, 202, 186);
 }
+.home .page-content .featured {
+  margin-bottom: 60px;
+}
 .home .page-content .featured h3.section-title {
+  margin-bottom: 40px;
   background-color: rgb(137, 146, 151);
 }
-
+.home .page-content .featured .gallery-block {
+  display: block;
+  margin: 0 auto 40px;
+  width: 80%;
+}
+.home .page-content .featured .gallery-block .sqs-gallery-container {
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+}
+.home .page-content .featured .gallery-block .sqs-gallery-thumbnails {
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+}
+.home .page-content .featured h1 {
+  margin: 0 auto;
+  max-width: 40vw;
+  font-size: 1.2rem;
+  line-height: 1.68rem;
+  letter-spacing: 0.06rem;
+  word-spacing: 0.06rem;
+}
 .default .page-content {
   min-height: 400px;
 }
@@ -619,9 +643,13 @@ body .frame {
   float: left;
 }
 #footer .etc .copyright {
+  width: 38%;
   text-align: left;
   font-size: 0.8rem;
   line-height: 1.6rem;
+}
+#footer .etc .socials {
+  width: 24%;
 }
 #footer .etc .socials ul {
   display: inline-block;
@@ -641,6 +669,7 @@ body .frame {
   color: rgb(255, 147, 47);
 }
 #footer .etc .nav-footer {
+  width: 38%;
   position: relative;
   float: right;
   text-align: right;
