@@ -7,7 +7,7 @@
 // CUSTOM CURSOR
 const cursor = document.querySelector(".cursor");
 
-// Position cursor div to cursor position
+// Position custom cursor to cursor position
 document.addEventListener("mousemove", (e) => {
   let x = e.clientX;
   let y = e.clientY;
@@ -18,6 +18,19 @@ document.addEventListener("mousemove", (e) => {
 // Add 'click' class to cursor on mouse down and remove on mouse up
 document.addEventListener("mousedown", (e) => cursor.classList.add("click"));
 document.addEventListener("mouseup", (e) => cursor.classList.remove("click"));
+
+// Show custom cursor only over certain elements
+[document.querySelector('.home .collections .gallery-block'), document.querySelector('.home .collections .image-block'), document.querySelector('.home .footer .ctas')].forEach(item => {
+  item.addEventListener('mouseover', function () {
+    cursor.classList.add('active');
+  });
+
+  item.addEventListener('mouseout', function () {
+    cursor.classList.remove('active');
+  });
+
+})
+
 
 // PAGE LOAD FUNCTIONS
 $(document).ready(function () {

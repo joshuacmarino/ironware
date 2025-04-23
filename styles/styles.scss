@@ -116,6 +116,11 @@
 		animation-fill-mode: both;
 	}
 
+	// Hide Cursor
+	@mixin cursor-none {
+		cursor: none !important;
+	}
+
 
 
 
@@ -142,11 +147,12 @@
 		text-align: center;
 		overflow: hidden;
 		background-color: $very-dark;
+		font-family: $montserrat;
+		font-weight: 400;
 
-		* {
+
+		* :not(.cursor) {
 			@include animate(.3s);
-			font-family: $montserrat;
-			font-weight: 400;
 		}
 
 		h1, h2, h3, h4, h5, h6, p, blockquote, a, ol, ul, li, hr, button {
@@ -155,6 +161,7 @@
 			border: none;
 			list-style: none;
 			color: $black;
+			font-weight: normal;
 			text-decoration: none;
 		}
 
@@ -173,13 +180,30 @@
 		.cursor {
 			display: block;
 			position: fixed;
-			height: 32px;
-			width: 32px;
-			border-radius: 32px;
-			background-color: $rust;
+			height: 120px;
+			width: 120px;
 			transform: translate(-50%, -50%);
 			transform-origin: top left;
+			pointer-events: none;
 			z-index: 9999;
+
+			&:after {
+				@include pseudo();
+				border-radius: 120px;
+				background-color: $rust;
+				transform: scale(0);
+				transform-origin: center;
+				opacity: 0;
+				@include animate(.2s, 0);
+			}
+
+			&.active {
+
+				&:after {
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
 		}
 
 		.click {
@@ -336,7 +360,7 @@
 								}
 
 								&:hover {
-									cursor: pointer;
+									@include cursor-none();
 
 									&:before {
 										opacity: .9;
@@ -386,6 +410,7 @@
 							position: relative;
 							transform: translateY(-4vw);
 							background-color: $light;
+							@include cursor-none();
 
 							&:before {
 								@include pseudo();
@@ -671,6 +696,7 @@
 
 		.ctas {
 
+
 			h2 {
 				padding: 0 0 .4rem 0;
 			}
@@ -687,6 +713,7 @@
 					width: unquote('~"calc(100% - 8vw)"');;
 					padding: 80px 4vw 70px;
 					@include animate(.2s);
+					@include cursor-none();
 
 					h2, p {
 						display: inline-block;
@@ -701,7 +728,6 @@
 					}
 
 					&:hover {
-						cursor: pointer;
 
 						.icon {
 							fill: $rust;

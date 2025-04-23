@@ -43,8 +43,10 @@ body {
   text-align: center;
   overflow: hidden;
   background-color: rgb(33, 33, 33);
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
-body * {
+body * :not(.cursor) {
   -webkit-transition: all 0.3s 0s ease;
   -moz-transition: all 0.3s 0s ease;
   -o-transition: all 0.3s 0s ease;
@@ -52,8 +54,6 @@ body * {
   transition: all 0.3s 0s ease !important;
   backface-visibility: hidden !important;
   perspective: 1000 !important;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  font-weight: 400;
 }
 body h1, body h2, body h3, body h4, body h5, body h6, body p, body blockquote, body a, body ol, body ul, body li, body hr, body button {
   margin: 0;
@@ -61,6 +61,7 @@ body h1, body h2, body h3, body h4, body h5, body h6, body p, body blockquote, b
   border: none;
   list-style: none;
   color: rgb(0, 0, 0);
+  font-weight: normal;
   text-decoration: none;
 }
 body h1, body h2 {
@@ -81,13 +82,46 @@ body .frame {
 body .cursor {
   display: block;
   position: fixed;
-  height: 32px;
-  width: 32px;
-  border-radius: 32px;
-  background-color: rgb(222, 117, 20);
+  height: 120px;
+  width: 120px;
   transform: translate(-50%, -50%);
   transform-origin: top left;
+  pointer-events: none;
   z-index: 9999;
+}
+body .cursor:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-transition: all 0.3s 0s ease;
+  -moz-transition: all 0.3s 0s ease;
+  -o-transition: all 0.3s 0s ease;
+  -ms-transition: all 0.3s 0s ease;
+  transition: all 0.3s 0s ease !important;
+  backface-visibility: hidden !important;
+  perspective: 1000 !important;
+  border-radius: 120px;
+  background-color: rgb(222, 117, 20);
+  transform: scale(0);
+  transform-origin: center;
+  opacity: 0;
+  -webkit-transition: all 0.2s 0 ease;
+  -moz-transition: all 0.2s 0 ease;
+  -o-transition: all 0.2s 0 ease;
+  -ms-transition: all 0.2s 0 ease;
+  transition: all 0.2s 0 ease !important;
+  backface-visibility: hidden !important;
+  perspective: 1000 !important;
+}
+body .cursor.active:after {
+  transform: scale(1);
+  opacity: 1;
 }
 body .click {
   scale: 0.8;
@@ -272,7 +306,7 @@ body .click {
   perspective: 1000 !important;
 }
 .home .page-content .collections .gallery-block .slide .margin-wrapper a:hover {
-  cursor: pointer;
+  cursor: none !important;
 }
 .home .page-content .collections .gallery-block .slide .margin-wrapper a:hover:before {
   opacity: 0.9;
@@ -318,6 +352,7 @@ body .click {
   position: relative;
   transform: translateY(-4vw);
   background-color: rgb(209, 202, 186);
+  cursor: none !important;
 }
 .home .page-content .collections .image-block .sqs-block-image-figure a:before {
   content: "";
@@ -614,6 +649,7 @@ body .click {
   transition: all 0.2s 0s ease !important;
   backface-visibility: hidden !important;
   perspective: 1000 !important;
+  cursor: none !important;
 }
 #footer .ctas div a h2, #footer .ctas div a p {
   display: inline-block;
@@ -624,9 +660,6 @@ body .click {
   max-height: 6vw;
   overflow: visible;
   opacity: 0.7;
-}
-#footer .ctas div a:hover {
-  cursor: pointer;
 }
 #footer .ctas div a:hover .icon {
   fill: rgb(222, 117, 20);
