@@ -484,6 +484,109 @@
 			}
 
 			.posts {
+				overflow: hidden;
+
+				header {
+					display: none;
+				}
+
+				.summary-block-wrapper {
+					.summary-item {
+						position: relative;
+
+						.summary-thumbnail-container {
+							margin: 0 !important;
+
+							.summary-thumbnail {
+
+								img {
+									top: -4vw !important;
+								}
+							}
+						}
+
+						.summary-content {
+							display: block;
+							width: 38vw;
+							position: absolute;
+							top:  10vw;
+							left: 10vw;
+							z-index: 10;
+
+							.summary-title {
+								margin-bottom: .8rem;
+
+								a {
+									font-family: $crimson;
+									font-style: italic;
+									text-transform: uppercase;
+									letter-spacing: .08rem;
+									@include fontsize(1.4rem);
+									color: $white;
+								}
+							}
+
+							.summary-excerpt {
+								p {
+									margin-bottom: 1.6rem;
+									font-family: $montserrat;
+									@include fontsize(.8rem, 1.8);
+									font-weight: 300;
+									letter-spacing: .02rem;
+									color: $light;
+
+									a {
+										display: inline-block;
+										position: relative;
+										font-family: $crimson;
+										@include fontsize(1.4rem);
+										line-height: 38px !important;
+										text-transform: lowercase;
+										font-style: italic;
+										color: $rust;
+										text-indent: 2px;
+
+										&:before, &:after {
+											@include pseudo();
+											width: 34px;
+											height: 13px;
+											top: unquote('~"calc(50% - 5px)"');
+											bottom: unset;
+											left: unset;
+											right: -40px;
+											background-image: url('../assets/svgs/button-arrow-rust.svg');
+											background-repeat: no-repeat;
+											background-position: center;
+											background-size: 100%;
+										}
+
+										&:after {
+											background-image: url('../assets/svgs/button-arrow-light-rust.svg');
+											opacity: 0;
+										}
+
+										&:hover {
+											color: $light-rust;
+
+											&:before, &:after {
+												right: -46px;
+											}
+
+											&:after {
+												opacity: 1;
+											}
+
+										}
+									}
+								}
+
+							}
+						}
+
+
+					}
+				}
+
 
 			}
 
@@ -829,9 +932,6 @@
 // SQUARESPACE //////////////////////////////////////////////////
 .grecaptcha-badge {
 	display: none !important;
-}
-.sqs-gallery-block-grid img {
-	opacity: 0;
 }
 
 // RESPONSIVE ///////////////////////////////////////////////////

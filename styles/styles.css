@@ -408,6 +408,104 @@ body .frame {
   letter-spacing: 0.06rem;
   word-spacing: 0.06rem;
 }
+.home .page-content .posts {
+  overflow: hidden;
+}
+.home .page-content .posts header {
+  display: none;
+}
+.home .page-content .posts .summary-block-wrapper .summary-item {
+  position: relative;
+}
+.home .page-content .posts .summary-block-wrapper .summary-item .summary-thumbnail-container {
+  margin: 0 !important;
+}
+.home .page-content .posts .summary-block-wrapper .summary-item .summary-thumbnail-container .summary-thumbnail img {
+  top: -4vw !important;
+}
+.home .page-content .posts .summary-block-wrapper .summary-item .summary-content {
+  display: block;
+  width: 38vw;
+  position: absolute;
+  top: 10vw;
+  left: 10vw;
+  z-index: 10;
+}
+.home .page-content .posts .summary-block-wrapper .summary-item .summary-content .summary-title {
+  margin-bottom: 0.8rem;
+}
+.home .page-content .posts .summary-block-wrapper .summary-item .summary-content .summary-title a {
+  font-family: "Crimson Text", Georgia, serif;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  color: rgb(255, 255, 255);
+}
+.home .page-content .posts .summary-block-wrapper .summary-item .summary-content .summary-excerpt p {
+  margin-bottom: 1.6rem;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.44rem;
+  font-weight: 300;
+  letter-spacing: 0.02rem;
+  color: rgb(209, 202, 186);
+}
+.home .page-content .posts .summary-block-wrapper .summary-item .summary-content .summary-excerpt p a {
+  display: inline-block;
+  position: relative;
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  line-height: 38px !important;
+  text-transform: lowercase;
+  font-style: italic;
+  color: rgb(222, 117, 20);
+  text-indent: 2px;
+}
+.home .page-content .posts .summary-block-wrapper .summary-item .summary-content .summary-excerpt p a:before, .home .page-content .posts .summary-block-wrapper .summary-item .summary-content .summary-excerpt p a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-transition: all 0.3s 0s ease;
+  -moz-transition: all 0.3s 0s ease;
+  -o-transition: all 0.3s 0s ease;
+  -ms-transition: all 0.3s 0s ease;
+  transition: all 0.3s 0s ease !important;
+  backface-visibility: hidden !important;
+  perspective: 1000 !important;
+  width: 34px;
+  height: 13px;
+  top: ~"calc(50% - 5px)";
+  bottom: unset;
+  left: unset;
+  right: -40px;
+  background-image: url("../assets/svgs/button-arrow-rust.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.home .page-content .posts .summary-block-wrapper .summary-item .summary-content .summary-excerpt p a:after {
+  background-image: url("../assets/svgs/button-arrow-light-rust.svg");
+  opacity: 0;
+}
+.home .page-content .posts .summary-block-wrapper .summary-item .summary-content .summary-excerpt p a:hover {
+  color: rgb(255, 147, 47);
+}
+.home .page-content .posts .summary-block-wrapper .summary-item .summary-content .summary-excerpt p a:hover:before, .home .page-content .posts .summary-block-wrapper .summary-item .summary-content .summary-excerpt p a:hover:after {
+  right: -46px;
+}
+.home .page-content .posts .summary-block-wrapper .summary-item .summary-content .summary-excerpt p a:hover:after {
+  opacity: 1;
+}
+
 .default .page-content {
   min-height: 400px;
 }
@@ -729,10 +827,6 @@ body .frame {
 
 .grecaptcha-badge {
   display: none !important;
-}
-
-.sqs-gallery-block-grid img {
-  opacity: 0;
 }
 
 @media screen and (max-width: 900px) {

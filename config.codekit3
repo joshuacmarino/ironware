@@ -65,6 +65,26 @@
       "oAP" : "\/assets\/fonts\/CrimsonText-Regular.woff2",
       "oF" : 0
     },
+    "\/assets\/svgs\/button-arrow-light-rust.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/svgs\/button-arrow-light-rust.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/svgs\/button-arrow-rust.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/svgs\/button-arrow-rust.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/svgs\/button-arrow.svg" : {
       "ft" : 2097152,
       "miP" : 0,
