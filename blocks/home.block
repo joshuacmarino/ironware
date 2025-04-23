@@ -18,9 +18,9 @@
             <squarespace:block-field id="section-featured" columns="1"/>
       </section>
 
-      <section class="about">
+      <section class="posts">
             <!-- Editable Squarespace Region -->
-            <squarespace:block-field id="section-about" columns="1"/>
+            <squarespace:block-field id="section-posts" columns="1"/>
       </section>
 
 </main>
