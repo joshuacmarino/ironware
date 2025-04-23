@@ -118,6 +118,11 @@ body .frame {
 #header .logo a:hover {
   transform: scale(1.04);
 }
+#header .nav-header {
+  display: none;
+  visibility: hidden;
+}
+
 .home .page-content {
   min-height: 400px;
 }

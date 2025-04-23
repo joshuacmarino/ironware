@@ -212,6 +212,7 @@
 		}
 
 		.nav-header {
+			@include hidden();
 
 		}
 	}
