@@ -98,7 +98,24 @@
 		clear: both;
 	}
 
+	// Reveal
+	@mixin show ($duration: .2s, $delay: .5s, $easing: ease, $repeat:1) {
+		-webkit-animation: show $duration $delay $easing $repeat;
+		-moz-animation: show $duration $delay $easing $repeat;
+		animation: show $duration $delay $easing $repeat;
+
+		-webkit-animation-fill-mode: both;
+		-moz-animation-fill-mode: both;
+		animation-fill-mode: both;
+	}
+
+
 // ANIMATIONS ///////////////////////////////////////////////////
+
+// Reveal Animation
+@-webkit-keyframes show {to {opacity: 1;}}
+@-moz-keyframes show {to {opacity: 1;}}
+@keyframes show {to {opacity: 1;}}
 
 // STYLES //////////////////////////////////////////////////////
 
@@ -273,6 +290,8 @@
 
 					.slide {
 						position: relative;
+						opacity: 0;
+						@include show(.5s, 1s);
 
 						.margin-wrapper {
 							position: relative;

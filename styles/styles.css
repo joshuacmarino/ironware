@@ -8,6 +8,21 @@
   src: url("../assets/fonts/CrimsonText-Italic.woff2") format("woff2"), url("../assets/fonts/CrimsonText-Italic.woff") format("woff"), url("../assets/fonts/CrimsonText-Italic.ttf") format("truetype");
   font-style: italic;
 }
+@-webkit-keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
 html {
   overflow: auto;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
@@ -188,6 +203,13 @@ body .frame {
 }
 .home .page-content .collections .gallery-block .slide {
   position: relative;
+  opacity: 0;
+  -webkit-animation: show 0.5s 1s ease 1;
+  -moz-animation: show 0.5s 1s ease 1;
+  animation: show 0.5s 1s ease 1;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .home .page-content .collections .gallery-block .slide .margin-wrapper {
   position: relative;
