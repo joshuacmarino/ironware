@@ -492,11 +492,22 @@
 				}
 
 				.summary-block-wrapper {
+					background: $very-dark;
+
+
 					.summary-item {
 						position: relative;
 
 						.summary-thumbnail-container {
 							margin: 0 !important;
+							opacity: 0;
+							@include show(.2s, .7s);
+
+							&:before {
+								@include pseudo();
+								background: linear-gradient(90deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 80%);
+								opacity: .7;
+							}
 
 							.summary-thumbnail {
 

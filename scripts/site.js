@@ -12,6 +12,8 @@ $(document).ready(function () {
     window.location = '../home';
   });
 
+
+
 });
 
 // SQUARESPACE IMAGE LOADER
@@ -19,10 +21,12 @@ function loadAllImages() {
   var images = document.querySelectorAll('img[data-src]' );
 
   setTimeout(function() {
+
     for (var i = 0; i < images.length; i++) {
       ImageLoader.load(images[i], {load: true});
     }
-  }, 500)
+
+  }, 500);
 
 }
 
@@ -30,4 +34,4 @@ function loadAllImages() {
 document.addEventListener('DOMContentLoaded', loadAllImages);
 
 // RELOAD IMAGES ON WINDOW RESIZE
-window.addEventListener('resize', loadAllImages);
+window.addEventListener('Resize', loadAllImages);
