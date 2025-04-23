@@ -176,8 +176,35 @@ body .frame {
   line-height: 2.6rem;
   line-height: 2.2rem;
 }
+.home .page-content .collections {
+  background-color: rgb(99, 92, 80);
+}
 .home .page-content .collections h3.section-title {
   background-color: rgb(99, 92, 80);
+}
+.home .page-content .collections .gallery-block {
+  padding-bottom: 0px;
+  position: relative;
+}
+.home .page-content .collections .gallery-block .slide {
+  position: relative;
+}
+.home .page-content .collections .gallery-block .slide .margin-wrapper {
+  position: relative;
+}
+.home .page-content .collections .gallery-block .slide .margin-wrapper .image-slide-title {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  pointer-events: none;
+  color: rgb(255, 255, 255);
+  font-family: "Crimson Text", Georgia, serif;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  font-size: 1.3rem;
+  line-height: 2.6rem;
+  line-height: 2.2rem;
 }
 .home .page-content .featured h3.section-title {
   background-color: rgb(137, 146, 151);

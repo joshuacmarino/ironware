@@ -261,8 +261,39 @@
 
 			.collections {
 
+				background-color: $clay;
+
 				h3.section-title {
 					background-color: $clay;
+				}
+
+				.gallery-block {
+					padding-bottom: 0px;
+					position: relative;
+
+					.slide {
+						position: relative;
+
+						.margin-wrapper {
+							position: relative;
+
+							.image-slide-title {
+								position: absolute;
+								top: 50%;
+								z-index: 10;
+								pointer-events: none;
+
+								color: $white;
+								font-family: $crimson;
+								font-style: italic;
+								text-transform: uppercase;
+								letter-spacing: .08rem;
+								@include fontsize(1.3rem);
+								line-height: 2.2rem;
+							}
+						}
+					}
+
 				}
 			}
 
