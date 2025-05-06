@@ -1,0 +1,39 @@
+<!-- Page Header -->
+{.section collection}
+<section class="content-header content-fill">
+
+      <!-- Page Thumbnail -->
+      {.section mainImage}
+      <img {@|image-meta} />
+      {.end}
+
+      <!-- Page Title -->
+      <h1 class="page-title">{title}</h1>
+
+      <!-- Store Navigation -->
+      <nav class="nav-breadcrumbs">
+
+      {.var @category section.categories}
+
+        <ul class="nav-frame">
+            <li><a href="../shop">collections</a></li>
+            <li><a href="../shop?category=@category">@category</a></li>
+            <li>collections</li>
+        </ul>
+
+      </nav>
+
+</section>
+{.end}
+
+<!-- Page Content -->
+<main class="page-content" data-content-field="main-content">
+
+      <div class="frame">
+
+            <!-- Squarespace Content -->
+            {squarespace.main-content}
+
+      </div>
+
+</main>

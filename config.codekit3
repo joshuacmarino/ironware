@@ -190,6 +190,14 @@
       "oAP" : "\/blocks\/scripts.block",
       "oF" : 0
     },
+    "\/blocks\/shop.block" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/shop.block",
+      "oF" : 0
+    },
     "\/blocks\/svg-icon-close.block" : {
       "cB" : 0,
       "ft" : 8192,
@@ -347,6 +355,14 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/shop.region" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/shop.region",
+      "oF" : 0
     },
     "\/styles\/reset.css" : {
       "aP" : 1,

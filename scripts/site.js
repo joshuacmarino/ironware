@@ -5,7 +5,7 @@
 
     // Show Menu
     function showMenu() {
-      $('body, .header, .page-content, .footer').toggleClass('showMenu');
+      $('body, .header, .content-header, .page-content, .footer').toggleClass('showMenu');
       cursor.classList.remove('active');
     }
 
@@ -25,7 +25,7 @@
     document.addEventListener("mouseup", (e) => cursor.classList.remove("click"));
 
     // Show custom cursor only over certain elements
-    [document.querySelector('.home .collections .gallery-block'), document.querySelector('.home .collections .sqs-block-image-figure'), document.querySelector('.footer .ctas'), document.querySelector('.home .header .menu-icon')].forEach(item => {
+    [document.querySelector('.collections .gallery-block'), document.querySelector('.collections .sqs-block-image-figure'), document.querySelector('.footer .ctas'), document.querySelector('.header .menu-icon')].forEach(item => {
       item?.addEventListener('mouseover', function () {
         cursor.classList.add('active');
       });
@@ -37,7 +37,7 @@
     })
 
     // Customize cursor based on specific element
-    document.querySelector('.home .header .menu-icon').addEventListener('mouseover', function () {
+    document.querySelector('.header .menu-icon').addEventListener('mouseover', function () {
       cursor.classList.remove('view');
       cursor.classList.remove('shop');
       cursor.classList.remove('contact');
@@ -45,7 +45,7 @@
       cursor.classList.add('menu');
     });
 
-    document.querySelector('.home .collections .gallery-block').addEventListener('mouseover', function () {
+    document.querySelector('.collections .gallery-block')?.addEventListener('mouseover', function () {
       cursor.classList.remove('menu');
       cursor.classList.remove('shop');
       cursor.classList.remove('contact');
@@ -69,7 +69,7 @@
       cursor.classList.add('register');
     });
 
-    [document.querySelector('.home .collections .sqs-block-image-figure'), document.querySelector('.footer .ctas .shop')].forEach(item => {
+    [document.querySelector('.collections .sqs-block-image-figure'), document.querySelector('.footer .ctas .shop')].forEach(item => {
       item?.addEventListener('mouseover', function () {
         cursor.classList.remove('menu');
         cursor.classList.remove('view');
