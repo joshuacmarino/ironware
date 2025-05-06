@@ -182,32 +182,171 @@
 			position: fixed;
 			height: 120px;
 			width: 120px;
-			transform: translate(-50%, -50%);
-			transform-origin: top left;
+			transform: translate(-50%, -50%) scale(1);
+			transform-origin: center;
 			pointer-events: none;
 			z-index: 9999;
 
-			&:after {
+			.cursor-icon {
+				display: block;
+				width: 36px;
+				height: 36px;
+				position: absolute;
+				top: 38px;
+				left: 42px;
+				opacity: 0;
+				z-index: 10;
+				@include animate(0s);
+
+				.icon {
+					display: block;
+					width: 36px;
+					height: 36px;
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					opacity: 0;
+					@include animate(0s);
+				}
+
+				.icon-menu {
+					width: 26px;
+					height: 26px;
+					top: 2px;
+					left: 4px;
+				}
+
+				.icon-user, .icon-email {
+					width: 30px;
+					height: 30px;
+					top: 0px;
+					left: 3px;
+				}
+
+				.icon-magnify {
+					width: 28px;
+					height: 28px;
+					top: 0px;
+					left: 5px;
+				}
+
+				.icon-view {
+					top: -2px;
+				}
+
+				.icon-close {
+					top: -4px;
+				}
+
+			}
+
+			.cursor-shadow {
+				display: block;
+				height: 120px;
+				width: 120px;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background: rgba(33, 33, 33, .6);
+				box-shadow: 4px 12px 28px 0px rgba(33, 33, 33, .6);
+				overflow: hidden;
+				border-radius: 120px;
+				transform: scale(0);
+				z-index: -1;
+				opacity: 0;
+				@include animate(0s);
+			}
+
+			&:before {
 				@include pseudo();
 				border-radius: 120px;
-				background-color: $rust;
+				background: $rust;
+				background: url('../assets/images/copper-texture.jpg'), linear-gradient(45deg, $rust 0%, $light-rust 120%);
+				background-blend-mode: soft-light, normal;
+				background-size: 100%;
+				background-repeat: no-repeat;
 				transform: scale(0);
 				transform-origin: center;
 				opacity: 0;
-				@include animate(.2s, 0);
+				@include animate(.1s);
+			}
+
+			&:after {
+				@include pseudo();
+				top: unset;
+				bottom: 16px;
+				content: 'view';
+				color: $white;
+				font-family: $crimson;
+				font-style: italic;
+				font-weight: 200;
+				text-transform: lowercase;
+				@include fontsize(1.2rem);
+				letter-spacing: 0.01rem;
+				z-index: 10;
+				opacity: 0;
+				@include animate(0s);
+
+			}
+
+			&.view {
+				&:after { content: 'view'; }
+				.cursor-icon .icon-view { opacity: 1; }
+			}
+			&.menu {
+				&:after { content: 'menu'; }
+				.cursor-icon .icon-menu { opacity: 1; }
+			}
+			&.shop {
+				&:after { content: 'shop'; }
+				.cursor-icon .icon-magnify { opacity: 1; }
+			}
+			&.register {
+				&:after { content: 'register'; }
+				.cursor-icon .icon-user { opacity: 1; }
+			}
+			&.contact {
+				&:after { content: 'contact'; }
+				.cursor-icon .icon-email { opacity: 1; }
 			}
 
 			&.active {
 
-				&:after {
+				.cursor-icon , .cursor-shadow {
+					opacity: 1;
+					@include animate(.2s, .1s);
+				}
+
+				.cursor-shadow {
+					transform: scale(1);
+				}
+
+				&:before {
+					background-size: 120%;
 					transform: scale(1);
 					opacity: 1;
+					@include animate(.26s);
+				}
+
+				&:after {
+					opacity: .88;
+					@include animate(.2s, .1s);
 				}
 			}
 		}
 
 		.click {
-		  scale: 0.8;
+		  transform: translate(-50%, -50%) scale(.9);
+		}
+
+		&.showMenu {
+			.cursor {
+				&.menu {
+					&:after { content: 'close'; }
+					.cursor-icon .icon-close { opacity: 1; }
+					.cursor-icon .icon-menu { opacity: 0; }
+				}
+			}
 		}
 	}
 
@@ -217,6 +356,23 @@
 		width: 100%;
 		position: fixed;
 		z-index: 999;
+
+		transform: translateX(0px);
+		@include animate(.3s);
+
+		&.showMenu {
+			transform: translateX(-360px);
+
+			.menu-icon {
+				.icon-menu {
+					opacity: 0;
+				}
+
+				.icon-close {
+					opacity: 1;
+				}
+			}
+		}
 
 		.logo {
 			display: block;
@@ -251,17 +407,141 @@
 			}
 		}
 
-		.nav-header {
-			@include hidden();
+		.menu-icon {
+			display: block;
+			width: 80px;
+			height: 80px;
+			position: absolute;
+			top: 17px;
+			right: 48px;
+
+			@include cursor-none();
+
+			.icon-menu {
+				display: block;
+				width: 26px;
+				height: 18px;
+				position: absolute;
+				top: 32px;
+				left: 28px;
+				opacity: 1;
+			}
+
+			.icon-close {
+				display: block;
+				width: 36px;
+				height: 36px;
+				position: absolute;
+				top: 23px;
+				left: 23px;
+				opacity: 0;
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
 
 		}
+
+
+	}
+
+	.nav-header {
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		width: 100vw;
+		height: 100vh;
+		background: linear-gradient(88deg, $very-dark unquote('~"calc(88vw - 280px)"'), $dark unquote('~"calc(100vw - 160px)"'));
+		z-index: 0;
+
+		.nav-frame {
+			width: 280px;
+			padding: 20px 40px 20px unquote('~"calc(100vw - 320px)"');
+			text-align: right;
+
+			li {
+				display: block;
+				line-height: 0rem;
+
+				a {
+					display: inline-block;
+					color: $white;
+					font-family: $crimson;
+					font-style: italic;
+					font-weight: 200;
+					text-transform: uppercase;
+					letter-spacing: .08rem;
+					@include fontsize(1.2rem);
+					line-height: 2.2rem;
+
+					&:hover {
+						color: $rust;
+					}
+				}
+
+				&.folder {
+					position: relative;
+					margin: 60px 0 0 0;
+
+					&:first-child {
+						margin: 40px 0 0 0;
+					}
+
+					&:last-child {
+						ul {
+							li {
+								display: none;
+							}
+						}
+					}
+
+					li {
+						a {
+							font-family: $montserrat;
+							font-style: normal;
+							@include fontsize(.6rem);
+							line-height: 1.5rem;
+							text-transform: uppercase;
+							letter-spacing: .08rem;
+							word-spacing: .1rem;
+						}
+					}
+
+					&:before {
+						@include pseudo;
+						background: linear-gradient(90deg, $light 0%, $white 60%);
+						width: 100%;
+						height: 1px;
+						top: -12px;
+						opacity: .2;
+						border: none;
+						border-radius: 20px;
+						overflow: hidden;
+
+					}
+				}
+			}
+		}
+
 	}
 
 	// Home Page
 	.home {
 		.page-content {
+			position: relative;
 			min-height: 400px;
 			background-color: $white;
+			border-radius: 0 0 0 0;
+
+			overflow: hidden;
+			transform: translateX(0px);
+			@include animate(.3s);
+
+			&.showMenu {
+				border-radius: 0 40px 0 0;
+				transform: translateX(-360px);
+			}
 
 			.section-title {
 				display: block;
@@ -657,8 +937,19 @@
 
 	// Footer
 	#footer {
-		padding: 8vh 5vw 16vh;
+		position: relative;
+		padding: 8vh 5vw 12vh;
 		background-color: $very-dark;
+
+		overflow: hidden;
+		border-radius: 0 0 0 0;
+		transform: translateX(0px);
+		@include animate(.3s);
+
+		&.showMenu {
+			border-radius: 0 0 40px 0;
+			transform: translateX(-360px);
+		}
 
 		h1, h2, h3, p, ul, ol, a {
 			color: $white;

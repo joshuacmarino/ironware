@@ -7,7 +7,7 @@
       "uuidString" : "55B52075-B8C0-4866-840F-7658F823D482"
     }
   ],
-  "creatorBuild" : "34689",
+  "creatorBuild" : "34704",
   "files" : {
     "\/.nova\/Configuration.json" : {
       "ft" : 524288,
@@ -64,6 +64,19 @@
       "oA" : 0,
       "oAP" : "\/assets\/fonts\/CrimsonText-Regular.woff2",
       "oF" : 0
+    },
+    "\/assets\/images\/copper-texture.jpg" : {
+      "ft" : 16384,
+      "iS" : 26417,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/images\/copper-texture.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/assets\/svgs\/button-arrow-light-rust.svg" : {
       "ft" : 2097152,
@@ -177,6 +190,14 @@
       "oAP" : "\/blocks\/scripts.block",
       "oF" : 0
     },
+    "\/blocks\/svg-icon-close.block" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/svg-icon-close.block",
+      "oF" : 0
+    },
     "\/blocks\/svg-icon-email.block" : {
       "cB" : 0,
       "ft" : 8192,
@@ -193,12 +214,28 @@
       "oAP" : "\/blocks\/svg-icon-magnify.block",
       "oF" : 0
     },
+    "\/blocks\/svg-icon-menu.block" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/svg-icon-menu.block",
+      "oF" : 0
+    },
     "\/blocks\/svg-icon-user.block" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/blocks\/svg-icon-user.block",
+      "oF" : 0
+    },
+    "\/blocks\/svg-icon-view.block" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/svg-icon-view.block",
       "oF" : 0
     },
     "\/collections\/blog.conf" : {

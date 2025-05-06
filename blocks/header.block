@@ -10,11 +10,29 @@
     </h1>
     {.end}
 
-    <!-- Primary Navigation -->
-    <squarespace:navigation navigationId="nav-header" template="nav-header" />
+    <!-- Menu Icon -->
+    <div class="menu-icon">
+      {@|apply svg-icon-menu.block}
+      {@|apply svg-icon-close.block}
+    </div>
 
   </div>
 
 </header>
 
-<div class="cursor"></div>
+<!-- Primary Navigation -->
+<squarespace:navigation navigationId="nav-header" template="nav-header" />
+
+<!-- Custom Cursor -->
+<div class="cursor">
+  <div class="cursor-icon">
+    {@|apply svg-icon-view.block}
+    {@|apply svg-icon-close.block}
+    {@|apply svg-icon-menu.block}
+    {@|apply svg-icon-magnify.block}
+    {@|apply svg-icon-user.block}
+    {@|apply svg-icon-email.block}
+  </div>
+
+  <div class="cursor-shadow"></div>
+</div>
