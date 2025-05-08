@@ -1408,7 +1408,7 @@
 
 			#productDetails {
 				width: unquote('~"calc(48.5% - 120px)"');
-				padding: 60px;
+				padding: 60px 60px 0 60px;
 				text-align: left;
 
 				.product-title {
@@ -1482,7 +1482,21 @@
 			}
 
 			.product-description {
+				float: right;
+				margin: 0;
+				padding: 0 60px;
+				width: unquote('~"calc(48.5% - 120px)"');
+				text-align: left;
 
+				h3 {
+					margin: 0 0 40px;
+					color: $rust;
+					text-indent: 4px;
+					font-family: $crimson;
+					@include fontsize(1rem);
+					font-weight: 400;
+					letter-spacing: 0;
+				}
 			}
 
 			#product-content {
