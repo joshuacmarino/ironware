@@ -1410,7 +1410,11 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   padding: 60px;
   text-align: left;
 }
+.shop .page-content #productDetails .product-title {
+  text-indent: -2px;
+}
 .shop .page-content #productDetails .product-price {
+  margin: 0 0 1rem;
   font-family: "Crimson Text", Georgia, serif;
   font-style: italic;
   text-transform: uppercase;
@@ -1425,6 +1429,119 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   line-height: 1.44rem;
   font-weight: 300;
   letter-spacing: 0.01rem;
+}
+.shop .page-content #productDetails .sqs-add-to-cart-button-wrapper {
+  background: none;
+  margin: 0;
+  padding: 20px 0 0;
+}
+.shop .page-content #productDetails .sqs-add-to-cart-button-wrapper .sqs-add-to-cart-button {
+  position: relative;
+  opacity: 1 !important;
+  padding: 4px 64px 5px 24px !important;
+  background-color: rgb(222, 117, 20);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.shop .page-content #productDetails .sqs-add-to-cart-button-wrapper .sqs-add-to-cart-button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-transition: all 0.3s 0s ease;
+  -moz-transition: all 0.3s 0s ease;
+  -o-transition: all 0.3s 0s ease;
+  -ms-transition: all 0.3s 0s ease;
+  transition: all 0.3s 0s ease !important;
+  backface-visibility: hidden !important;
+  perspective: 1000 !important;
+  width: 34px;
+  height: 13px;
+  top: ~"calc(50% - 6.5px)";
+  bottom: unset;
+  left: unset;
+  right: 22px;
+  background: url("../assets/svgs/button-arrow.svg") no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.shop .page-content #productDetails .sqs-add-to-cart-button-wrapper .sqs-add-to-cart-button:hover {
+  background-color: rgb(255, 147, 47);
+}
+.shop .page-content #productDetails .sqs-add-to-cart-button-wrapper .sqs-add-to-cart-button:hover:after {
+  right: 18px;
+}
+.shop .page-content #productDetails .sqs-add-to-cart-button-wrapper .sqs-add-to-cart-button .sqs-add-to-cart-button-inner {
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 38px !important;
+  text-transform: lowercase;
+  font-style: italic;
+}
+.shop .page-content #product-content {
+  padding: 80px 0;
+  text-align: left;
+}
+.shop .page-content #product-content .gallery-block {
+  display: block;
+  margin: 0 auto 20px;
+  width: 85%;
+}
+.shop .page-content #product-content .gallery-block .sqs-gallery-container {
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+}
+.shop .page-content #product-content .gallery-block .sqs-gallery-thumbnails {
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+}
+.shop .page-content #product-content .html-block {
+  display: block;
+  margin: 0 auto 40px;
+  width: 80%;
+  max-width: 760px;
+}
+.shop .page-content #product-content h1 {
+  margin: 1em 0 0.5em;
+  font-size: 1.1em;
+  line-height: 2.2em;
+  font-weight: 200;
+  letter-spacing: 0.05rem;
+}
+.shop .page-content #product-content p {
+  display: inline-block;
+  margin: 0 0 1em 0;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.01rem;
+}
+.shop .page-content .section-title {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  background-color: rgb(99, 92, 80);
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 0.6rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  word-spacing: 0.1rem;
+  color: rgb(255, 255, 255);
+}
+.shop .page-content .section-title.collection {
+  background-color: rgba(137, 146, 151, 0.4);
+  color: rgb(65, 64, 66);
+  opacity: 0.7;
 }
 
 .grecaptcha-badge {

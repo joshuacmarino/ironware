@@ -578,7 +578,6 @@
 			}
 		}
 
-
 		.ctas {
 
 
@@ -1412,7 +1411,12 @@
 				padding: 60px;
 				text-align: left;
 
+				.product-title {
+					text-indent: -2px;
+				}
+
 				.product-price {
+					margin: 0 0 1rem;
 					font-family: $crimson;
 					font-style: italic;
 					text-transform: uppercase;
@@ -1425,7 +1429,123 @@
 					font-family: $montserrat;
 					@include fontsize(.8rem, 1.8);
 					font-weight: 300;
-					letter-spacing: .01rem;;
+					letter-spacing: .01rem;
+				}
+
+				.sqs-add-to-cart-button-wrapper {
+					background: none;
+					margin: 0;
+					padding: 20px 0 0;
+
+					.sqs-add-to-cart-button {
+						position: relative;
+						opacity: 1 !important;
+						padding: 4px 64px 5px 24px !important;
+						background-color: $rust;
+						border-radius: 4px;
+						overflow: hidden;
+
+						&:after {
+							@include pseudo();
+							width: 34px;
+							height: 13px;
+							top: unquote('~"calc(50% - 6.5px)"');
+							bottom: unset;
+							left: unset;
+							right: 22px;
+							background: url('../assets/svgs/button-arrow.svg') no-repeat;
+							background-position: center;
+							background-size: 100%;
+						}
+
+						&:hover {
+							background-color: $light-rust;
+
+							&:after {
+								right: 18px;
+							}
+						}
+
+						.sqs-add-to-cart-button-inner {
+							font-family: $crimson;
+							@include fontsize(1.1rem);
+							font-weight: 400;
+							letter-spacing: 0;
+							line-height: 38px !important;
+							text-transform: lowercase;
+							font-style: italic;
+						}
+
+					}
+				}
+
+			}
+
+			.product-description {
+
+			}
+
+			#product-content {
+				padding: 80px 0;
+				text-align: left;
+
+				.gallery-block {
+					display: block;
+					margin: 0 auto 20px;
+					width: 85%;
+
+
+					.sqs-gallery-container {
+						border-radius: 4px 4px 0 0;
+						overflow: hidden;
+					}
+
+					.sqs-gallery-thumbnails {
+						border-radius: 0 0 4px 4px;
+						overflow: hidden;
+					}
+				}
+
+				.html-block {
+					display: block;
+					margin: 0 auto 40px;
+					width: 80%;
+					max-width: 760px;
+				}
+
+				h1 {
+					margin: 1em 0 .5em;
+					@include fontsize(1.1em);
+					font-weight: 200;
+					letter-spacing: .05rem;
+				}
+
+				p {
+					display: inline-block;
+					margin: 0 0 1em 0;
+					font-family: $montserrat;
+					@include fontsize(.8rem, 2);
+					font-weight: 300;
+					letter-spacing: .01rem;
+				}
+			}
+
+			.section-title {
+				display: block;
+				width: 100%;
+				padding: 16px 0;
+				background-color: $clay;
+				font-family: $montserrat;
+				@include fontsize(.6rem);
+				text-transform: uppercase;
+				letter-spacing: .04rem;
+				word-spacing: .1rem;
+				color: $white;
+
+				&.collection {
+					background-color: rgba(137, 146, 151, .4);
+					color: $dark;
+					opacity: .7;
 				}
 			}
 		}

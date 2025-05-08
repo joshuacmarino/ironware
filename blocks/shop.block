@@ -40,9 +40,11 @@
             <squarespace:block-field id="product-content" columns="1"/>
 
             <!-- Collection Products -->
+            <h3 class="section-title collection">From This Collection</h3>
             <squarespace:block-field id="collection-products" columns="1"/>
 
             <!-- Related Products -->
+            <h3 class="section-title related">Related Products</h3>
             <squarespace:block-field id="related-products" columns="1"/>
 
       </div>
