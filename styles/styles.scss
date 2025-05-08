@@ -454,6 +454,9 @@
 		height: 100vh;
 		background: linear-gradient(88deg, $very-dark unquote('~"calc(88vw - 280px)"'), $dark unquote('~"calc(100vw - 160px)"'));
 		z-index: 0;
+		opacity: 0;
+
+		@include show(.3s, .3s);
 
 		.nav-frame {
 			width: 280px;
@@ -1275,24 +1278,26 @@
 	}
 
 	// Shop
-	#shop {
+	.shop {
 
 		.content-header {
 			position: relative;
 			height: 340px;
+			padding: 0 0 60px 0;
+			background-color: $clay;
+			background-repeat: none;
+			background-position: center;
+			background-size: 110%;
+			opacity: 0;
 
 			overflow: hidden;
 			transform: translateX(0px);
 			@include animate(.3s);
+			@include show(.3s, .3s);
 
 			&.showMenu {
 				border-radius: 0 40px 0 0;
 				transform: translateX(-360px);
-			}
-
-			img {
-				transform: scale(1.5) translateX(-30px);
-				transform-origin: center;
 			}
 
 			&:after {
@@ -1307,7 +1312,65 @@
 				width: 100%;
 				position: absolute;
 				top: unset;
-				bottom: 30px;
+				bottom: 80px;
+			}
+
+			.nav-shop {
+				display: block;
+				width: 100%;
+				padding: 16px 60px;
+				position: absolute;
+				bottom: 0px;
+				background-color: $clay;
+				font-family: $montserrat;
+				@include fontsize(.6rem);
+				text-transform: uppercase;
+				letter-spacing: .04rem;
+				word-spacing: .1rem;
+				color: $white;
+				z-index: 10;
+
+				.breadcrumbs {
+					li {
+						display: inline-block;
+						position: relative;
+						padding-right: 36px;
+						float: left;
+						color: $white;
+
+						&:after {
+							@include pseudo;
+							content: "/";
+							width: 12px;
+							left: unset;
+							right: 12px;
+							opacity: .4;
+						}
+
+						&:last-child {
+							&:after {
+								display: none;
+							}
+						}
+
+						a {
+							display: inline-block;
+							color: $white;
+						}
+
+						&:hover {
+							a {
+								color: $light-rust;
+							}
+						}
+					}
+				}
+
+				#shop-search {
+					position: absolute;
+					top: 4px;
+					right: 60px;
+				}
 			}
 
 
@@ -1323,6 +1386,10 @@
 
 			&.showMenu {
 				transform: translateX(-360px);
+			}
+
+			#productNav {
+				display: none !important;
 			}
 		}
 	}

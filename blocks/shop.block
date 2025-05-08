@@ -1,25 +1,27 @@
+<!-- Squarespace JSON Variables -->
+{.var @collection categoryFilter}
+{.var @productCategory item.categories.0}
+{.var @productTitle item.title}
+
 <!-- Page Header -->
 {.section collection}
-<section class="content-header content-fill">
-
-      <!-- Page Thumbnail -->
-      {.section mainImage}
-      <img {@|image-meta} />
-      {.end}
+<section class="content-header content-fill" style="background-image: url('{mainImage.assetUrl}'); background-position: {mainImage.mediaFocalPoint.x} {mainImage.mediaFocalPoint.y};">
 
       <!-- Page Title -->
       <h1 class="page-title">{title}</h1>
 
-      <!-- Store Navigation -->
-      <nav class="nav-breadcrumbs">
+      <!-- Store Breadcrumbs -->
+      <nav class="nav-shop">
 
-      {.var @category section.categories}
-
-        <ul class="nav-frame">
-            <li><a href="../shop">collections</a></li>
-            <li><a href="../shop?category=@category">@category</a></li>
-            <li>collections</li>
+        <ul class="breadcrumbs">
+            <li><a href="../shop">Shop</a></li>
+            {.if @productCategory}<li><a href="../shop?category={@productCategory}">{@productCategory}</a></li>{.or}
+            {.if @collection}<li>{@collection}</li>{.end}
+            {.end}
+            {.if @productTitle}<li>{@productTitle}</li>{.end}
         </ul>
+
+        <squarespace:block-field id="shop-search" columns="1"/>
 
       </nav>
 

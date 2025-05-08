@@ -79,6 +79,26 @@
       });
     })
 
+// Position Images
+function convertDecimalsToPercentInBackgroundPosition() {
+  const section = document.querySelector('.content-fill');
+  if (!section) return;
+
+  const styleAttr = section.getAttribute('style');
+
+  // Match background-position: .54 .72 or similar
+  const updatedStyle = styleAttr.replace(/background-position:\s*([\d.]+)\s+([\d.]+)/, (match, x, y) => {
+    const xPercent = (parseFloat(x) * 100).toFixed(2);
+    const yPercent = (parseFloat(y) * 100).toFixed(2);
+    return `background-position: ${xPercent}% ${yPercent}%`;
+  });
+
+  section.setAttribute('style', updatedStyle);
+}
+
+// Execute after DOM is ready
+document.addEventListener('DOMContentLoaded', convertDecimalsToPercentInBackgroundPosition);
+
 // PAGE LOAD FUNCTIONS
 $(document).ready(function () {
 
@@ -96,18 +116,18 @@ $(document).ready(function () {
 });
 
 // SQUARESPACE IMAGE LOADER
-function loadAllImages() {
-  var images = document.querySelectorAll('img[data-src]' );
-
-  setTimeout(function() {
-
-    for (var i = 0; i < images.length; i++) {
-      ImageLoader.load(images[i], {load: true});
-    }
-
-  }, 500);
-
-}
+// function loadAllImages() {
+//   var images = document.querySelectorAll('img[data-src]' );
+//
+//   setTimeout(function() {
+//
+//     for (var i = 0; i < images.length; i++) {
+//       ImageLoader.load(images[i], {load: true});
+//     }
+//
+//   }, 500);
+//
+// }
 
 // LOAD IMAGES ON PAGE LOAD
 document.addEventListener('DOMContentLoaded', loadAllImages);

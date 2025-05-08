@@ -413,6 +413,13 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   height: 100vh;
   background: linear-gradient(88deg, rgb(33, 33, 33) ~"calc(88vw - 280px)", rgb(65, 64, 66) ~"calc(100vw - 160px)");
   z-index: 0;
+  opacity: 0;
+  -webkit-animation: show 0.3s 0.3s ease 1;
+  -moz-animation: show 0.3s 0.3s ease 1;
+  animation: show 0.3s 0.3s ease 1;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .nav-header .nav-frame {
   width: 280px;
@@ -1252,9 +1259,15 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   min-height: 400px;
 }
 
-#shop .content-header {
+.shop .content-header {
   position: relative;
   height: 340px;
+  padding: 0 0 60px 0;
+  background-color: rgb(99, 92, 80);
+  background-repeat: none;
+  background-position: center;
+  background-size: 110%;
+  opacity: 0;
   overflow: hidden;
   transform: translateX(0px);
   -webkit-transition: all 0.3s 0s ease;
@@ -1264,16 +1277,18 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   transition: all 0.3s 0s ease !important;
   backface-visibility: hidden !important;
   perspective: 1000 !important;
+  -webkit-animation: show 0.3s 0.3s ease 1;
+  -moz-animation: show 0.3s 0.3s ease 1;
+  animation: show 0.3s 0.3s ease 1;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
-#shop .content-header.showMenu {
+.shop .content-header.showMenu {
   border-radius: 0 40px 0 0;
   transform: translateX(-360px);
 }
-#shop .content-header img {
-  transform: scale(1.5) translateX(-30px);
-  transform-origin: center;
-}
-#shop .content-header:after {
+.shop .content-header:after {
   content: "";
   display: block;
   position: absolute;
@@ -1293,15 +1308,76 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0.1) 70%);
   opacity: 0.8;
 }
-#shop .content-header .page-title {
+.shop .content-header .page-title {
   display: block;
   color: rgb(255, 255, 255);
   width: 100%;
   position: absolute;
   top: unset;
-  bottom: 30px;
+  bottom: 80px;
 }
-#shop .page-content {
+.shop .content-header .nav-shop {
+  display: block;
+  width: 100%;
+  padding: 16px 60px;
+  position: absolute;
+  bottom: 0px;
+  background-color: rgb(99, 92, 80);
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 0.6rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  word-spacing: 0.1rem;
+  color: rgb(255, 255, 255);
+  z-index: 10;
+}
+.shop .content-header .nav-shop .breadcrumbs li {
+  display: inline-block;
+  position: relative;
+  padding-right: 36px;
+  float: left;
+  color: rgb(255, 255, 255);
+}
+.shop .content-header .nav-shop .breadcrumbs li:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-transition: all 0.3s 0s ease;
+  -moz-transition: all 0.3s 0s ease;
+  -o-transition: all 0.3s 0s ease;
+  -ms-transition: all 0.3s 0s ease;
+  transition: all 0.3s 0s ease !important;
+  backface-visibility: hidden !important;
+  perspective: 1000 !important;
+  content: "/";
+  width: 12px;
+  left: unset;
+  right: 12px;
+  opacity: 0.4;
+}
+.shop .content-header .nav-shop .breadcrumbs li:last-child:after {
+  display: none;
+}
+.shop .content-header .nav-shop .breadcrumbs li a {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+}
+.shop .content-header .nav-shop .breadcrumbs li:hover a {
+  color: rgb(255, 147, 47);
+}
+.shop .content-header .nav-shop #shop-search {
+  position: absolute;
+  top: 4px;
+  right: 60px;
+}
+.shop .page-content {
   position: relative;
   background: rgb(255, 255, 255);
   overflow: hidden;
@@ -1314,8 +1390,11 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   backface-visibility: hidden !important;
   perspective: 1000 !important;
 }
-#shop .page-content.showMenu {
+.shop .page-content.showMenu {
   transform: translateX(-360px);
+}
+.shop .page-content #productNav {
+  display: none !important;
 }
 
 .grecaptcha-badge {

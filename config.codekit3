@@ -420,6 +420,14 @@
       "oA" : 0,
       "oAP" : "\/template.conf",
       "oF" : 0
+    },
+    "\/untitled.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/untitled-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
     }
   },
   "hooks" : [
