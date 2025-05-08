@@ -36,6 +36,15 @@
             <!-- Squarespace Content -->
             {squarespace.main-content}
 
+            <!-- Additional Product Content -->
+            <squarespace:block-field id="product-content" columns="1"/>
+
+            <!-- Collection Products -->
+            <squarespace:block-field id="collection-products" columns="1"/>
+
+            <!-- Related Products -->
+            <squarespace:block-field id="related-products" columns="1"/>
+
       </div>
 
 </main>

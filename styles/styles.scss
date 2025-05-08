@@ -1370,6 +1370,8 @@
 					position: absolute;
 					top: 4px;
 					right: 60px;
+
+					@include hidden();
 				}
 			}
 
@@ -1388,8 +1390,43 @@
 				transform: translateX(-360px);
 			}
 
-			#productNav {
+			#productNav, .product-quantity-input {
 				display: none !important;
+			}
+
+			#productGallery {
+
+				.slide {
+					position: relative;
+
+					img {
+						position: absolute;
+						left: 0px !important;
+					}
+				}
+
+			}
+
+			#productDetails {
+				width: unquote('~"calc(48.5% - 120px)"');
+				padding: 60px;
+				text-align: left;
+
+				.product-price {
+					font-family: $crimson;
+					font-style: italic;
+					text-transform: uppercase;
+					letter-spacing: .08rem;
+					@include fontsize(1.2rem);
+				}
+
+				p {
+					margin-bottom: 1.6rem;
+					font-family: $montserrat;
+					@include fontsize(.8rem, 1.8);
+					font-weight: 300;
+					letter-spacing: .01rem;;
+				}
 			}
 		}
 	}

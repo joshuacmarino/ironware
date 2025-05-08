@@ -1376,6 +1376,8 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   position: absolute;
   top: 4px;
   right: 60px;
+  display: none;
+  visibility: hidden;
 }
 .shop .page-content {
   position: relative;
@@ -1393,8 +1395,36 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
 .shop .page-content.showMenu {
   transform: translateX(-360px);
 }
-.shop .page-content #productNav {
+.shop .page-content #productNav, .shop .page-content .product-quantity-input {
   display: none !important;
+}
+.shop .page-content #productGallery .slide {
+  position: relative;
+}
+.shop .page-content #productGallery .slide img {
+  position: absolute;
+  left: 0px !important;
+}
+.shop .page-content #productDetails {
+  width: ~"calc(48.5% - 120px)";
+  padding: 60px;
+  text-align: left;
+}
+.shop .page-content #productDetails .product-price {
+  font-family: "Crimson Text", Georgia, serif;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+}
+.shop .page-content #productDetails p {
+  margin-bottom: 1.6rem;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.44rem;
+  font-weight: 300;
+  letter-spacing: 0.01rem;
 }
 
 .grecaptcha-badge {
