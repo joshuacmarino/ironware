@@ -1492,6 +1492,7 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   padding: 0 60px;
   width: ~"calc(48.5% - 120px)";
   text-align: left;
+  z-index: 10;
 }
 .shop .page-content .product-description h3 {
   margin: 0 0 40px;
