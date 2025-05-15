@@ -108,6 +108,26 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/svgs\/chevron-dark.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/svgs\/chevron-dark.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/svgs\/chevron-light.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/svgs\/chevron-light.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/svgs\/ironware-logo.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -334,6 +354,17 @@
       "oAP" : "\/home.region",
       "oF" : 0
     },
+    "\/scripts\/accordion.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/scripts\/accordion-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/scripts\/site-min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -363,6 +394,18 @@
       "oA" : 0,
       "oAP" : "\/shop.region",
       "oF" : 0
+    },
+    "\/styles\/accordion.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/styles\/accordion-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/styles\/reset.css" : {
       "aP" : 1,

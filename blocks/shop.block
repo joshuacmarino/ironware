@@ -3,30 +3,16 @@
 {.var @productCategory item.categories.0}
 {.var @productTitle item.title}
 
-<!-- Page Header -->
+
+
+
+
+
 {.section collection}
-<section class="content-header content-fill" style="background-image: url('{mainImage.assetUrl}'); background-position: {mainImage.mediaFocalPoint.x} {mainImage.mediaFocalPoint.y};">
 
-      <!-- Page Title -->
-      <h1 class="page-title">{title}</h1>
-
-      <!-- Store Breadcrumbs -->
-      <nav class="nav-shop">
-
-        <ul class="breadcrumbs">
-            <li><a href="../shop">Shop</a></li>
-            {.if @productCategory}<li><a href="../shop?category={@productCategory}">{@productCategory}</a></li>{.or}
-            {.if @collection}<li>{@collection}</li>{.end}
-            {.end}
-            {.if @productTitle}<li>{@productTitle}</li>{.end}
-        </ul>
-
-        <squarespace:block-field id="shop-search" columns="1"/>
-
-      </nav>
+{.end}
 
 </section>
-{.end}
 
 <!-- Page Content -->
 <main class="page-content" data-content-field="main-content">
@@ -36,16 +22,16 @@
             <!-- Squarespace Content -->
             {squarespace.main-content}
 
-            <!-- Additional Product Content -->
-            <squarespace:block-field id="product-content" columns="1"/>
-
             <!-- Collection Products -->
             <h3 class="section-title collection">From This Collection</h3>
-            <squarespace:block-field id="collection-products" columns="1"/>
+            <!-- <squarespace:query collection="../shop" category="{@productCategory}" featured="false">
+                  {.repeated section items}
+                     <h1>{title}</h1>
+                  {.end}
+            </squarespace:query> -->
 
             <!-- Related Products -->
             <h3 class="section-title related">Related Products</h3>
-            <squarespace:block-field id="related-products" columns="1"/>
 
       </div>
 

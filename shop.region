@@ -9,6 +9,44 @@
       <!-- Header -->
       {@|apply header.block}
 
+      <!-- Page Header -->
+      {.section collection}
+
+            <!-- Squarespace JSON Variables -->
+            {.var @collection categoryFilter}
+            {.var @productCategory item.categories.0}
+
+            {.if @collection || @productCategory}
+                  <squarespace:query collection="collection-banners" tag="{@collection}" limit="1">
+                        {.repeated section items}
+                              <section class="content-header content-fill" style="background-image: url('{assetUrl}'); background-position: {mediaFocalPoint.x} {mediaFocalPoint.y};">
+
+                              <!-- Page Title -->
+                              <h1 class="page-title">{title}</h1>
+
+                        {.end}
+                  </squarespace:query>
+            {.or}
+                  <section class="content-header content-fill" style="background-image: url('{mainImage.assetUrl}'); background-position: {mainImage.mediaFocalPoint.x} {mainImage.mediaFocalPoint.y};">
+
+                  <!-- Page Title -->
+                  <h1 class="page-title">{title}</h1>
+            {.end}
+
+            <!-- Store Breadcrumbs -->
+            <nav class="nav-shop">
+                  <ul class="breadcrumbs">
+                        <li><a href="../shop">Shop</a></li>
+                        {.if @productCategory}<li><a href="../shop?category={@productCategory}">{@productCategory}</a></li>{.or}
+                        {.if @collection}<li>{@collection}</li>{.end}
+                        {.end}
+                        {.if @productTitle}<li>{@productTitle}</li>{.end}
+                  </ul>
+
+                  <squarespace:block-field id="shop-search" columns="1"/>
+            </nav>
+      {.end}
+
       <!-- Default Page -->
       {@|apply shop.block}
 

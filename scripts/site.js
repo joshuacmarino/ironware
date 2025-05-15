@@ -116,18 +116,19 @@ $(document).ready(function () {
 });
 
 // SQUARESPACE IMAGE LOADER
-// function loadAllImages() {
-//   var images = document.querySelectorAll('img[data-src]' );
-//
-//   setTimeout(function() {
-//
-//     for (var i = 0; i < images.length; i++) {
-//       ImageLoader.load(images[i], {load: true});
-//     }
-//
-//   }, 500);
-//
-// }
+function loadAllImages() {
+  var images = document.querySelectorAll('div:not(.product-image) img[data-src]' );
+  var filteredImages = Array.from(images).filter(img => {return !img.closest(`div.${excludedClass}`);});
+
+  setTimeout(function() {
+
+    for (var i = 0; i < filteredImages.length; i++) {
+      ImageLoader.load(filteredImages[i], {load: true});
+    }
+
+  }, 500);
+
+}
 
 // LOAD IMAGES ON PAGE LOAD
 document.addEventListener('DOMContentLoaded', loadAllImages);
