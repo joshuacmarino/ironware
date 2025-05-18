@@ -26,6 +26,7 @@
 <!-- Custom Cursor -->
 <div class="cursor">
   <div class="cursor-icon">
+    {@|apply svg-icon-home.block}
     {@|apply svg-icon-view.block}
     {@|apply svg-icon-close.block}
     {@|apply svg-icon-menu.block}

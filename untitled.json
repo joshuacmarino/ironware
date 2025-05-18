@@ -3,7 +3,7 @@
 	"id" : "67e3025f62434c05515ab832",
 	"identifier" : "ironware",
 	"websiteType" : 1,
-	"contentModifiedOn" : 1747341705276,
+	"contentModifiedOn" : 1747348392180,
 	"cloneable" : false,
 	"hasBeenCloneable" : false,
 	"developerMode" : true,
@@ -116,15 +116,23 @@
 		"scarcityEnabledOnProductBlocks" : false,
 		"scarcityMessageType" : "DEFAULT_SCARCITY_MESSAGE",
 		"scarcityThreshold" : 10,
-		"multipleQuantityAllowedForServices" : true,
+		"multipleQuantityAllowedForServices" : false,
 		"restockNotificationsEnabled" : false,
+		"restockNotificationsSuccessText" : "",
 		"restockNotificationsMailingListSignUpEnabled" : false,
-		"relatedProductsEnabled" : false,
-		"relatedProductsOrdering" : "random",
+		"relatedProductsEnabled" : true,
+		"relatedProductsSectionTitle" : "From This Collection ",
+		"relatedProductsOrdering" : "recently_added",
+		"customSoldOutText" : "Sold Out",
 		"soldOutVariantsDropdownDisabled" : false,
 		"productComposerOptedIn" : false,
 		"productComposerABTestOptedOut" : false,
-		"productReviewsEnabled" : false
+		"productReviewsEnabled" : false,
+		"displayNativeProductReviewsEnabled" : false,
+		"displayImportedProductReviewsEnabled" : false,
+		"productReviewsDisplayScope" : "ALL_REVIEWS",
+		"productReviewsMerchantEmailEnabled" : false,
+		"hasOptedToCollectNativeReviews" : false
 	  },
 	  "minimumOrderSubtotalEnabled" : false,
 	  "minimumOrderSubtotal" : {
@@ -132,7 +140,7 @@
 		"value" : "0.00"
 	  },
 	  "isLive" : false,
-	  "multipleQuantityAllowedForServices" : true
+	  "multipleQuantityAllowedForServices" : false
 	},
 	"useEscapeKeyToLogin" : false,
 	"ssBadgeType" : 1,
@@ -216,7 +224,7 @@
 	"title" : "Shop",
 	"navigationTitle" : "Shop",
 	"urlId" : "shop",
-	"itemCount" : 1,
+	"itemCount" : 2,
 	"updatedOn" : 1746641236765,
 	"description" : "",
 	"pageSize" : 999,
@@ -224,7 +232,7 @@
 	"folder" : false,
 	"dropdown" : false,
 	"tags" : [ ],
-	"categories" : [ "Lighting" ],
+	"categories" : [ "lighting" ],
 	"homepage" : false,
 	"typeName" : "products",
 	"regionName" : "shop",
@@ -232,11 +240,11 @@
 	"categoryPagesSeoHidden" : false,
 	"tagPagesSeoHidden" : false,
 	"qrCodeEnabled" : false,
-	"pagePermissionType" : 1,
 	"typeLabel" : "products",
 	"fullUrl" : "/shop",
 	"passwordProtected" : false,
 	"draft" : false,
+	"pagePermissionType" : 1,
 	"title" : "Shop",
 	"navigationTitle" : "Shop"
   },
@@ -253,7 +261,7 @@
   },
   "shoppingCart" : {
 	"websiteId" : "67e3025f62434c05515ab832",
-	"created" : 1747342242069,
+	"created" : 1747348493794,
 	"entries" : [ ],
 	"shippingLocation" : { },
 	"taxLineItems" : [ ],
@@ -365,9 +373,23 @@
 	"showSignInLink" : true
   },
   "productMerchandisingContext" : {
+	"68265be88f7ec45fb988176b" : {
+	  "scarcityEnabled" : false,
+	  "scarcityShownByDefault" : false,
+	  "customSoldOutText" : "Sold Out",
+	  "afterPayAvailable" : false,
+	  "klarnaAvailable" : false,
+	  "afterPayMin" : 0,
+	  "afterPayMax" : 0,
+	  "klarnaMin" : 0,
+	  "klarnaMax" : 0,
+	  "mailingListSignUpEnabled" : false,
+	  "mailingListOptInByDefault" : false
+	},
 	"681a817b2a94dc617cc60bb2" : {
 	  "scarcityEnabled" : false,
 	  "scarcityShownByDefault" : false,
+	  "customSoldOutText" : "Sold Out",
 	  "afterPayAvailable" : false,
 	  "klarnaAvailable" : false,
 	  "afterPayMin" : 0,
@@ -392,17 +414,17 @@
   "empty" : false,
   "emptyFolder" : false,
   "calendarView" : false,
-  "categoryFilter" : "Lighting",
+  "categoryFilter" : "lighting",
   "items" : [ {
 	"id" : "681a817b2a94dc617cc60bb2",
 	"collectionId" : "680939f2e6ff861c3ee9afe7",
 	"recordType" : 11,
 	"addedOn" : 1746567547030,
-	"updatedOn" : 1747336873906,
+	"updatedOn" : 1747348356580,
 	"displayIndex" : 0,
 	"starred" : false,
 	"passthrough" : false,
-	"categories" : [ "Lighting" ],
+	"categories" : [ "lighting" ],
 	"workflowState" : 1,
 	"publishOn" : 1746567644670,
 	"authorId" : "51672416e4b00ae130d16924",
@@ -489,6 +511,8 @@
 	  } ],
 	  "variantOptionOrdering" : [ ],
 	  "isSubscribable" : false,
+	  "relatedCategories" : [ "Lighting" ],
+	  "relatedProductsStrategy" : "categories",
 	  "fulfilledExternally" : false,
 	  "productAddOnsConfiguration" : {
 		"productAddOns" : [ ]
@@ -535,6 +559,8 @@
 	} ],
 	"variantOptionOrdering" : [ ],
 	"isSubscribable" : false,
+	"relatedCategories" : [ "Lighting" ],
+	"relatedProductsStrategy" : "categories",
 	"fulfilledExternally" : false,
 	"productAddOnsConfiguration" : {
 	  "productAddOns" : [ ]
@@ -544,7 +570,7 @@
 	  "collectionId" : "680939f2e6ff861c3ee9afe7",
 	  "recordType" : 2,
 	  "addedOn" : 1746663478602,
-	  "updatedOn" : 1746663478602,
+	  "updatedOn" : 1747344360225,
 	  "displayIndex" : 0,
 	  "authorId" : "51672416e4b00ae130d16924",
 	  "parentId" : "681a817b2a94dc617cc60bb2",
@@ -594,7 +620,7 @@
 	  "collectionId" : "680939f2e6ff861c3ee9afe7",
 	  "recordType" : 2,
 	  "addedOn" : 1747331845654,
-	  "updatedOn" : 1747331845654,
+	  "updatedOn" : 1747344360231,
 	  "displayIndex" : 1,
 	  "authorId" : "51672416e4b00ae130d16924",
 	  "parentId" : "681a817b2a94dc617cc60bb2",
@@ -644,9 +670,214 @@
 	"pendingPushedServices" : { },
 	"originalSize" : "5295x7943",
 	"recordTypeLabel" : "store-item"
+  }, {
+	"id" : "68265be88f7ec45fb988176b",
+	"collectionId" : "680939f2e6ff861c3ee9afe7",
+	"recordType" : 11,
+	"addedOn" : 1746567547030,
+	"updatedOn" : 1747348359310,
+	"displayIndex" : 1,
+	"starred" : false,
+	"passthrough" : false,
+	"categories" : [ "lighting" ],
+	"workflowState" : 1,
+	"publishOn" : 1747344470691,
+	"authorId" : "51672416e4b00ae130d16924",
+	"systemDataId" : "2ee52d6e-4dc3-4cc6-8f0f-12ef7031bbdb",
+	"systemDataVariants" : "2550x4352,100w,300w,500w,750w,1000w,1500w,2500w",
+	"systemDataSourceType" : "JPEG",
+	"filename" : "folded aysemetrical sconce_front view 1.jpg",
+	"mediaFocalPoint" : {
+	  "x" : 0.5,
+	  "y" : 0.5,
+	  "source" : 3
+	},
+	"colorData" : {
+	  "topLeftAverage" : "ffffff",
+	  "topRightAverage" : "ffffff",
+	  "bottomLeftAverage" : "ffffff",
+	  "bottomRightAverage" : "ffffff",
+	  "centerAverage" : "ffffff",
+	  "suggestedBgColor" : "c0b9b3"
+	},
+	"urlId" : "the-vowline-chandelier-czebn",
+	"title" : "The Trine Sconce",
+	"body" : "<div class=\"sqs-layout sqs-grid-12 columns-12\" data-layout-label=\"Post Body\" data-type=\"item\" id=\"item-68265be88f7ec45fb988176b\"><div class=\"row sqs-row\"><div class=\"col sqs-col-12 span-12\"><div class=\"sqs-block html-block sqs-block-html\" data-block-type=\"2\" id=\"block-1bd68cbac71b78f1f1a7\"><div class=\"sqs-block-content\">\n\n<div class=\"sqs-html-content\">\n  <h3 style=\"white-space:pre-wrap;\"><em>lead time: 4-6 weeks</em></h3>\n</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n  \n\n\n\n</div></div><div class=\"sqs-block code-block sqs-block-code\" data-block-type=\"23\" id=\"block-9e60587a458aa5ae4f72\"><div class=\"sqs-block-content\"><article class=\"js-accotabs\" data-design=\"accordion\" data-url=\"/the-vowline-chandelier\"></article></div></div><div class=\"sqs-block gallery-block sqs-block-gallery\" data-block-json=\"&#123;&quot;transientGalleryId&quot;:&quot;68265be88f7ec45fb988175f&quot;,&quot;collectionId&quot;:&quot;68265be88f7ec45fb988175f&quot;,&quot;design&quot;:&quot;slideshow&quot;,&quot;autoplay&quot;:false,&quot;controls&quot;:false,&quot;thumbnails&quot;:true,&quot;padding&quot;:20,&quot;lightbox&quot;:false,&quot;methodOption&quot;:&quot;transient&quot;,&quot;aspect-ratio&quot;:&quot;square&quot;,&quot;auto-crop&quot;:true,&quot;square-thumbs&quot;:true,&quot;show-meta-basic&quot;:true,&quot;show-meta&quot;:true,&quot;show-meta-only-title&quot;:false,&quot;show-meta-on-hover&quot;:false,&quot;meta-position&quot;:&quot;bottom&quot;,&quot;thumbnail-strip-height&quot;:80,&quot;thumbnail-strip-margin&quot;:0,&quot;thumbnails-per-row&quot;:4&#125;\" data-block-type=\"8\" id=\"block-2b4430d0d9b41a9c5de3\"><div class=\"sqs-block-content\">\n\n\n  \n\n  \n\n\n<div class=\"\n  sqs-gallery-container\n  sqs-gallery-block-slideshow\n  \n  \n  \n  sqs-gallery-has-thumbnails\n\n  \n    sqs-gallery-block-show-meta sqs-gallery-block-meta-position-bottom\n    \n  \n  sqs-gallery-block-show-meta\n  \n  \n\n  \n  \n\n  \n  \n  clear\"\n  \n  \n>\n  <div class=\"sqs-gallery\">\n    \n      \n\n        \n          \n            <div class=\"slide content-fill\" data-type=\"image\" data-click-through-url=\"\">\n              \n                <noscript><img src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012446-7JM91FICFCGGDK68FC64/120524_IWI_05_0307R%2BBright.jpg\" alt=\"120524_IWI_05_0307R+Bright.jpg\" /></noscript><img class=\"thumb-image\" elementtiming=\"system-gallery-block-slideshow\" data-src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012446-7JM91FICFCGGDK68FC64/120524_IWI_05_0307R%2BBright.jpg\" data-image=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012446-7JM91FICFCGGDK68FC64/120524_IWI_05_0307R%2BBright.jpg\" data-image-dimensions=\"1024x683\" data-image-focal-point=\"0.5,0.5\" alt=\"120524_IWI_05_0307R+Bright.jpg\" data-load=\"false\" data-image-id=\"68265be88f7ec45fb9881764\" data-type=\"image\" />\n              \n\n              \n                \n              \n              <div class=\"color-overlay\"></div>\n            </div>\n          \n          \n        \n\n        \n\n        \n\n      \n\n        \n          \n            <div class=\"slide content-fill\" data-type=\"image\" data-click-through-url=\"\">\n              \n                <noscript><img src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013634-K5GAQRG05TS7Q7UGWYSA/120524_IWI_05_0328.jpg\" alt=\"120524_IWI_05_0328.jpg\" /></noscript><img class=\"thumb-image\" elementtiming=\"system-gallery-block-slideshow\" data-src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013634-K5GAQRG05TS7Q7UGWYSA/120524_IWI_05_0328.jpg\" data-image=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013634-K5GAQRG05TS7Q7UGWYSA/120524_IWI_05_0328.jpg\" data-image-dimensions=\"1024x683\" data-image-focal-point=\"0.5,0.5\" alt=\"120524_IWI_05_0328.jpg\" data-load=\"false\" data-image-id=\"68265be88f7ec45fb9881768\" data-type=\"image\" />\n              \n\n              \n                \n              \n              <div class=\"color-overlay\"></div>\n            </div>\n          \n          \n        \n\n        \n\n        \n\n      \n\n        \n          \n            <div class=\"slide content-fill\" data-type=\"image\" data-click-through-url=\"\">\n              \n                <noscript><img src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728014424-YPQV0OU09COKC8NZBBAS/120524_IWI_05_0325.jpg\" alt=\"120524_IWI_05_0325.jpg\" /></noscript><img class=\"thumb-image\" elementtiming=\"system-gallery-block-slideshow\" data-src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728014424-YPQV0OU09COKC8NZBBAS/120524_IWI_05_0325.jpg\" data-image=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728014424-YPQV0OU09COKC8NZBBAS/120524_IWI_05_0325.jpg\" data-image-dimensions=\"1024x683\" data-image-focal-point=\"0.5,0.5\" alt=\"120524_IWI_05_0325.jpg\" data-load=\"false\" data-image-id=\"68265be88f7ec45fb9881762\" data-type=\"image\" />\n              \n\n              \n                \n              \n              <div class=\"color-overlay\"></div>\n            </div>\n          \n          \n        \n\n        \n\n        \n\n      \n\n        \n          \n            <div class=\"slide content-fill\" data-type=\"image\" data-click-through-url=\"\">\n              \n                <noscript><img src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013448-VKO92IW4Z635SQBFLKJM/120524_IWI_05_0331.jpg\" alt=\"120524_IWI_05_0331.jpg\" /></noscript><img class=\"thumb-image\" elementtiming=\"system-gallery-block-slideshow\" data-src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013448-VKO92IW4Z635SQBFLKJM/120524_IWI_05_0331.jpg\" data-image=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013448-VKO92IW4Z635SQBFLKJM/120524_IWI_05_0331.jpg\" data-image-dimensions=\"1024x683\" data-image-focal-point=\"0.5,0.5\" alt=\"120524_IWI_05_0331.jpg\" data-load=\"false\" data-image-id=\"68265be88f7ec45fb9881766\" data-type=\"image\" />\n              \n\n              \n                \n              \n              <div class=\"color-overlay\"></div>\n            </div>\n          \n          \n        \n\n        \n\n        \n\n      \n\n        \n          \n            <div class=\"slide content-fill\" data-type=\"image\" data-click-through-url=\"\">\n              \n                <noscript><img src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012287-E89XNHEYWTX696EM6MD5/120524_IWI_05_0307R_N.jpg\" alt=\"120524_IWI_05_0307R_N.jpg\" /></noscript><img class=\"thumb-image\" elementtiming=\"system-gallery-block-slideshow\" data-src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012287-E89XNHEYWTX696EM6MD5/120524_IWI_05_0307R_N.jpg\" data-image=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012287-E89XNHEYWTX696EM6MD5/120524_IWI_05_0307R_N.jpg\" data-image-dimensions=\"1024x683\" data-image-focal-point=\"0.5,0.5\" alt=\"120524_IWI_05_0307R_N.jpg\" data-load=\"false\" data-image-id=\"68265be88f7ec45fb9881760\" data-type=\"image\" />\n              \n\n              \n                \n              \n              <div class=\"color-overlay\"></div>\n            </div>\n          \n          \n        \n\n        \n\n        \n\n      \n    \n  </div>\n\n  \n\n</div>\n\n\n  \n\n    <div class=\"sqs-gallery-thumbnails\" >\n      \n          <img tabindex=\"0\" role=\"button\" aria-label=\"Slide 1\" data-type=\"image\"data-load=\"false\" elementtiming=\"system-gallery-thumbnail\" data-src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012446-7JM91FICFCGGDK68FC64/120524_IWI_05_0307R%2BBright.jpg\" data-image=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012446-7JM91FICFCGGDK68FC64/120524_IWI_05_0307R%2BBright.jpg\" data-image-dimensions=\"1024x683\" data-image-focal-point=\"0.5,0.5\" alt=\"120524_IWI_05_0307R+Bright.jpg\"  src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012446-7JM91FICFCGGDK68FC64/120524_IWI_05_0307R%2BBright.jpg\" width=\"120\" height=\"80\" alt=\"Slide 1\" sizes=\"120px\" style=\"display:block\" srcset=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012446-7JM91FICFCGGDK68FC64/120524_IWI_05_0307R%2BBright.jpg?format=100w 100w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012446-7JM91FICFCGGDK68FC64/120524_IWI_05_0307R%2BBright.jpg?format=300w 300w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012446-7JM91FICFCGGDK68FC64/120524_IWI_05_0307R%2BBright.jpg?format=500w 500w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012446-7JM91FICFCGGDK68FC64/120524_IWI_05_0307R%2BBright.jpg?format=750w 750w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012446-7JM91FICFCGGDK68FC64/120524_IWI_05_0307R%2BBright.jpg?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012446-7JM91FICFCGGDK68FC64/120524_IWI_05_0307R%2BBright.jpg?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012446-7JM91FICFCGGDK68FC64/120524_IWI_05_0307R%2BBright.jpg?format=2500w 2500w\" loading=\"lazy\" decoding=\"async\" data-loader=\"sqs\">\n\n        \n\n        \n      \n          <img tabindex=\"0\" role=\"button\" aria-label=\"Slide 2\" data-type=\"image\"data-load=\"false\" elementtiming=\"system-gallery-thumbnail\" data-src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013634-K5GAQRG05TS7Q7UGWYSA/120524_IWI_05_0328.jpg\" data-image=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013634-K5GAQRG05TS7Q7UGWYSA/120524_IWI_05_0328.jpg\" data-image-dimensions=\"1024x683\" data-image-focal-point=\"0.5,0.5\" alt=\"120524_IWI_05_0328.jpg\"  src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013634-K5GAQRG05TS7Q7UGWYSA/120524_IWI_05_0328.jpg\" width=\"120\" height=\"80\" alt=\"Slide 2\" sizes=\"120px\" style=\"display:block\" srcset=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013634-K5GAQRG05TS7Q7UGWYSA/120524_IWI_05_0328.jpg?format=100w 100w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013634-K5GAQRG05TS7Q7UGWYSA/120524_IWI_05_0328.jpg?format=300w 300w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013634-K5GAQRG05TS7Q7UGWYSA/120524_IWI_05_0328.jpg?format=500w 500w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013634-K5GAQRG05TS7Q7UGWYSA/120524_IWI_05_0328.jpg?format=750w 750w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013634-K5GAQRG05TS7Q7UGWYSA/120524_IWI_05_0328.jpg?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013634-K5GAQRG05TS7Q7UGWYSA/120524_IWI_05_0328.jpg?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013634-K5GAQRG05TS7Q7UGWYSA/120524_IWI_05_0328.jpg?format=2500w 2500w\" loading=\"lazy\" decoding=\"async\" data-loader=\"sqs\">\n\n        \n\n        \n      \n          <img tabindex=\"0\" role=\"button\" aria-label=\"Slide 3\" data-type=\"image\"data-load=\"false\" elementtiming=\"system-gallery-thumbnail\" data-src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728014424-YPQV0OU09COKC8NZBBAS/120524_IWI_05_0325.jpg\" data-image=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728014424-YPQV0OU09COKC8NZBBAS/120524_IWI_05_0325.jpg\" data-image-dimensions=\"1024x683\" data-image-focal-point=\"0.5,0.5\" alt=\"120524_IWI_05_0325.jpg\"  src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728014424-YPQV0OU09COKC8NZBBAS/120524_IWI_05_0325.jpg\" width=\"120\" height=\"80\" alt=\"Slide 3\" sizes=\"120px\" style=\"display:block\" srcset=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728014424-YPQV0OU09COKC8NZBBAS/120524_IWI_05_0325.jpg?format=100w 100w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728014424-YPQV0OU09COKC8NZBBAS/120524_IWI_05_0325.jpg?format=300w 300w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728014424-YPQV0OU09COKC8NZBBAS/120524_IWI_05_0325.jpg?format=500w 500w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728014424-YPQV0OU09COKC8NZBBAS/120524_IWI_05_0325.jpg?format=750w 750w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728014424-YPQV0OU09COKC8NZBBAS/120524_IWI_05_0325.jpg?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728014424-YPQV0OU09COKC8NZBBAS/120524_IWI_05_0325.jpg?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728014424-YPQV0OU09COKC8NZBBAS/120524_IWI_05_0325.jpg?format=2500w 2500w\" loading=\"lazy\" decoding=\"async\" data-loader=\"sqs\">\n\n        \n\n        \n      \n          <img tabindex=\"0\" role=\"button\" aria-label=\"Slide 4\" data-type=\"image\"data-load=\"false\" elementtiming=\"system-gallery-thumbnail\" data-src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013448-VKO92IW4Z635SQBFLKJM/120524_IWI_05_0331.jpg\" data-image=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013448-VKO92IW4Z635SQBFLKJM/120524_IWI_05_0331.jpg\" data-image-dimensions=\"1024x683\" data-image-focal-point=\"0.5,0.5\" alt=\"120524_IWI_05_0331.jpg\"  src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013448-VKO92IW4Z635SQBFLKJM/120524_IWI_05_0331.jpg\" width=\"120\" height=\"80\" alt=\"Slide 4\" sizes=\"120px\" style=\"display:block\" srcset=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013448-VKO92IW4Z635SQBFLKJM/120524_IWI_05_0331.jpg?format=100w 100w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013448-VKO92IW4Z635SQBFLKJM/120524_IWI_05_0331.jpg?format=300w 300w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013448-VKO92IW4Z635SQBFLKJM/120524_IWI_05_0331.jpg?format=500w 500w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013448-VKO92IW4Z635SQBFLKJM/120524_IWI_05_0331.jpg?format=750w 750w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013448-VKO92IW4Z635SQBFLKJM/120524_IWI_05_0331.jpg?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013448-VKO92IW4Z635SQBFLKJM/120524_IWI_05_0331.jpg?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728013448-VKO92IW4Z635SQBFLKJM/120524_IWI_05_0331.jpg?format=2500w 2500w\" loading=\"lazy\" decoding=\"async\" data-loader=\"sqs\">\n\n        \n\n        \n      \n          <img tabindex=\"0\" role=\"button\" aria-label=\"Slide 5\" data-type=\"image\"data-load=\"false\" elementtiming=\"system-gallery-thumbnail\" data-src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012287-E89XNHEYWTX696EM6MD5/120524_IWI_05_0307R_N.jpg\" data-image=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012287-E89XNHEYWTX696EM6MD5/120524_IWI_05_0307R_N.jpg\" data-image-dimensions=\"1024x683\" data-image-focal-point=\"0.5,0.5\" alt=\"120524_IWI_05_0307R_N.jpg\"  src=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012287-E89XNHEYWTX696EM6MD5/120524_IWI_05_0307R_N.jpg\" width=\"120\" height=\"80\" alt=\"Slide 5\" sizes=\"120px\" style=\"display:block\" srcset=\"https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012287-E89XNHEYWTX696EM6MD5/120524_IWI_05_0307R_N.jpg?format=100w 100w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012287-E89XNHEYWTX696EM6MD5/120524_IWI_05_0307R_N.jpg?format=300w 300w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012287-E89XNHEYWTX696EM6MD5/120524_IWI_05_0307R_N.jpg?format=500w 500w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012287-E89XNHEYWTX696EM6MD5/120524_IWI_05_0307R_N.jpg?format=750w 750w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012287-E89XNHEYWTX696EM6MD5/120524_IWI_05_0307R_N.jpg?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012287-E89XNHEYWTX696EM6MD5/120524_IWI_05_0307R_N.jpg?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/1746728012287-E89XNHEYWTX696EM6MD5/120524_IWI_05_0307R_N.jpg?format=2500w 2500w\" loading=\"lazy\" decoding=\"async\" data-loader=\"sqs\">\n\n        \n\n        \n      \n    </div>\n\n  \n\n\n\n\n\n</div></div><div class=\"sqs-block html-block sqs-block-html\" data-block-type=\"2\" id=\"block-fda3f21a7e747bae7c7f\"><div class=\"sqs-block-content\">\n\n<div class=\"sqs-html-content\">\n  <h1 style=\"white-space:pre-wrap;\">BEHIND THE VOWLINE</h1><p class=\"\" style=\"white-space:pre-wrap;\">Part of our Reimagined Collection, inspired by one of our favorite Ironware pieces, the Giselle Chandelier \u2013 8162, the Vowline 8303 is our interpretation. Showcasing new materials in the raw and endless customizable options, whether it be size, shape, material or finishes, the Vowline is a statement piece. A focal point of any room it is featured in.</p><p class=\"\" style=\"white-space:pre-wrap;\">Shown here made with a steel frame in our black standard finish and raw zinc staves around the perimeter, the Vowline has seemingly endless customizations with different shapes, materials, finishes and layouts. Arrange the vertical staves in an number of configurations from a skyline to a gradient. Contact our sales team to discuss custom options.</p><h1 style=\"white-space:pre-wrap;\">FORGED IN THE SHADOWS</h1><p class=\"\" style=\"white-space:pre-wrap;\">Part of our Reimagined Collection, inspired by one of our favorite Ironware pieces, the Giselle Chandelier \u2013 8162, the Vowline 8303 is our interpretation. Showcasing new materials in the raw and endless customizable options, whether it be size, shape, material or finishes, the Vowline is a statement piece. A focal point of any room it is featured in.inishes and layouts. Arrange the vertical staves in an number of configurations from a skyline to a gradient. Contact our sales team to discuss custom options.</p>\n</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n  \n\n\n\n</div></div></div></div></div>",
+	"excerpt" : "<p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>Part of our Reimagined Collection, inspired by one of our favorite Ironware pieces, the Giselle Chandelier \u2013 8162, the Vowline 8303 is our interpretation. Showcasing new materials in the raw and endless customizable options, whether it be size, shape, material or finishes, the Vowline is a statement piece. A focal point of any room it is featured in.</span></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Shown here made with a steel frame in our black standard finish and raw zinc staves around the perimeter, the Vowline has seemingly endless customizations with different shapes, materials, finishes and layouts. Arrange the vertical staves in an number of configurations from a skyline to a gradient. Contact our sales team to discuss custom options.</p>",
+	"likeCount" : 0,
+	"commentCount" : 0,
+	"publicCommentCount" : 0,
+	"commentState" : 1,
+	"unsaved" : false,
+	"author" : {
+	  "id" : "51672416e4b00ae130d16924",
+	  "displayName" : "Joshua Marino",
+	  "firstName" : "Joshua",
+	  "lastName" : "Marino",
+	  "avatarUrl" : "https://images.squarespace-cdn.com/content/v2/namespaces/memberAccountAvatars/libraries/51672416e4b00ae130d16924/8ca65ab1-3f11-470d-834a-7adfe8d0ab3c/Avatar+2025.jpg?format=300w",
+	  "avatarId" : "5854479044024380047ae371",
+	  "websiteUrl" : "https://joshuamarino.me",
+	  "bio" : "<p>Designer, strategist &amp; writer based in sunny California. I love telling stories that bring people together.</p>",
+	  "avatarAssetUrl" : "https://images.squarespace-cdn.com/content/v2/namespaces/memberAccountAvatars/libraries/51672416e4b00ae130d16924/8ca65ab1-3f11-470d-834a-7adfe8d0ab3c/Avatar+2025.jpg?format=300w"
+	},
+	"fullUrl" : "/shop/the-vowline-chandelier-czebn",
+	"assetUrl" : "https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/2ee52d6e-4dc3-4cc6-8f0f-12ef7031bbdb/folded+aysemetrical+sconce_front+view+1.jpg",
+	"contentType" : "image/jpeg",
+	"structuredContent" : {
+	  "_type" : "StoreItem",
+	  "priceCents" : 0,
+	  "salePriceCents" : 0,
+	  "priceMoney" : {
+		"currency" : "USD",
+		"value" : "0.00"
+	  },
+	  "salePriceMoney" : {
+		"currency" : "USD",
+		"value" : "0.00"
+	  },
+	  "onSale" : false,
+	  "productType" : 1,
+	  "customAddButtonText" : "Add To Cart",
+	  "useCustomAddButtonText" : true,
+	  "variants" : [ {
+		"attributes" : { },
+		"optionValues" : [ ],
+		"id" : "62a43fde-3afa-4a9f-83ab-1b2d3f7b150a",
+		"sku" : "SQ4334745",
+		"price" : 0,
+		"salePrice" : 0,
+		"priceMoney" : {
+		  "currency" : "USD",
+		  "value" : "0.00"
+		},
+		"salePriceMoney" : {
+		  "currency" : "USD",
+		  "value" : "0.00"
+		},
+		"onSale" : false,
+		"unlimited" : false,
+		"qtyInStock" : 1,
+		"width" : 0.0,
+		"height" : 0.0,
+		"weight" : 0.0,
+		"imageIds" : [ ],
+		"images" : [ ],
+		"len" : 0.0
+	  } ],
+	  "variantOptionOrdering" : [ ],
+	  "isSubscribable" : false,
+	  "relatedCategories" : [ "Lighting" ],
+	  "relatedProductsStrategy" : "categories",
+	  "fulfilledExternally" : false,
+	  "productAddOnsConfiguration" : {
+		"productAddOns" : [ ]
+	  }
+	},
+	"priceCents" : 0,
+	"salePriceCents" : 0,
+	"priceMoney" : {
+	  "currency" : "USD",
+	  "value" : "0.00"
+	},
+	"salePriceMoney" : {
+	  "currency" : "USD",
+	  "value" : "0.00"
+	},
+	"onSale" : false,
+	"productType" : 1,
+	"customAddButtonText" : "Add To Cart",
+	"useCustomAddButtonText" : true,
+	"variants" : [ {
+	  "attributes" : { },
+	  "optionValues" : [ ],
+	  "id" : "62a43fde-3afa-4a9f-83ab-1b2d3f7b150a",
+	  "sku" : "SQ4334745",
+	  "price" : 0,
+	  "salePrice" : 0,
+	  "priceMoney" : {
+		"currency" : "USD",
+		"value" : "0.00"
+	  },
+	  "salePriceMoney" : {
+		"currency" : "USD",
+		"value" : "0.00"
+	  },
+	  "onSale" : false,
+	  "unlimited" : false,
+	  "qtyInStock" : 1,
+	  "width" : 0.0,
+	  "height" : 0.0,
+	  "weight" : 0.0,
+	  "imageIds" : [ ],
+	  "images" : [ ],
+	  "len" : 0.0
+	} ],
+	"variantOptionOrdering" : [ ],
+	"isSubscribable" : false,
+	"relatedCategories" : [ "Lighting" ],
+	"relatedProductsStrategy" : "categories",
+	"fulfilledExternally" : false,
+	"productAddOnsConfiguration" : {
+	  "productAddOns" : [ ]
+	},
+	"items" : [ {
+	  "id" : "68265c552c1c894833e439c1",
+	  "collectionId" : "680939f2e6ff861c3ee9afe7",
+	  "recordType" : 2,
+	  "addedOn" : 1747344469959,
+	  "updatedOn" : 1747344469959,
+	  "displayIndex" : 0,
+	  "authorId" : "51672416e4b00ae130d16924",
+	  "parentId" : "68265be88f7ec45fb988176b",
+	  "systemDataId" : "2ee52d6e-4dc3-4cc6-8f0f-12ef7031bbdb",
+	  "systemDataVariants" : "2550x4352,100w,300w,500w,750w,1000w,1500w,2500w",
+	  "systemDataSourceType" : "JPEG",
+	  "filename" : "folded aysemetrical sconce_front view 1.jpg",
+	  "mediaFocalPoint" : {
+		"x" : 0.5,
+		"y" : 0.5,
+		"source" : 3
+	  },
+	  "colorData" : {
+		"topLeftAverage" : "ffffff",
+		"topRightAverage" : "ffffff",
+		"bottomLeftAverage" : "ffffff",
+		"bottomRightAverage" : "ffffff",
+		"centerAverage" : "ffffff",
+		"suggestedBgColor" : "c0b9b3"
+	  },
+	  "title" : "",
+	  "body" : null,
+	  "likeCount" : 0,
+	  "commentCount" : 0,
+	  "publicCommentCount" : 0,
+	  "commentState" : 1,
+	  "author" : {
+		"id" : "51672416e4b00ae130d16924",
+		"displayName" : "Joshua Marino",
+		"firstName" : "Joshua",
+		"lastName" : "Marino",
+		"avatarUrl" : "https://images.squarespace-cdn.com/content/v2/namespaces/memberAccountAvatars/libraries/51672416e4b00ae130d16924/8ca65ab1-3f11-470d-834a-7adfe8d0ab3c/Avatar+2025.jpg?format=300w",
+		"avatarId" : "5854479044024380047ae371",
+		"websiteUrl" : "https://joshuamarino.me",
+		"bio" : "<p>Designer, strategist &amp; writer based in sunny California. I love telling stories that bring people together.</p>",
+		"avatarAssetUrl" : "https://images.squarespace-cdn.com/content/v2/namespaces/memberAccountAvatars/libraries/51672416e4b00ae130d16924/8ca65ab1-3f11-470d-834a-7adfe8d0ab3c/Avatar+2025.jpg?format=300w"
+	  },
+	  "fullUrl" : "/shop/null",
+	  "assetUrl" : "https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/2ee52d6e-4dc3-4cc6-8f0f-12ef7031bbdb/folded+aysemetrical+sconce_front+view+1.jpg",
+	  "contentType" : "image/jpeg",
+	  "pushedServices" : { },
+	  "pendingPushedServices" : { },
+	  "originalSize" : "2550x4352",
+	  "recordTypeLabel" : "image"
+	} ],
+	"pushedServices" : { },
+	"pendingPushedServices" : { },
+	"originalSize" : "2550x4352",
+	"recordTypeLabel" : "store-item"
   } ],
   "pagePreviewContext" : {
 	"isPreviewMode" : false,
-	"memberAccessUrl" : "/shop?category=Lighting&format=json-pretty&requestAccess=true"
+	"memberAccessUrl" : "/shop?category=lighting&format=json-pretty&requestAccess=true"
   }
 }

@@ -20,64 +20,50 @@
       cursor.style.top = y + "px";
     });
 
+    // Attach event listeners to mouse events
+    document.addEventListener('mouseover', function(event) {
+      const home = event.target.closest('.logo a');
+      const menu = event.target.closest('.menu-icon');
+      const shop = event.target.closest('.collections .sqs-block-image-figure, .ctas .shop');
+      const view = event.target.closest('.collections .gallery-block, .product-image');
+      const register = event.target.closest('.ctas .register');
+      const contact = event.target.closest('.ctas .contact');
+
+
+      if (home || menu || shop || view || register || contact) {
+        cursor.classList.add('active');
+      }
+
+      //Customize cursor icon
+      cursor.classList.remove('home', 'view', 'shop', 'contact', 'register', 'menu');
+
+      if(home){cursor.classList.add('home');}
+      if(menu){cursor.classList.add('menu');}
+      if(view){cursor.classList.add('view');}
+      if(shop){cursor.classList.add('shop');}
+      if(register){cursor.classList.add('register');}
+      if(contact){cursor.classList.add('contact');}
+
+    });
+
+    document.addEventListener('mouseout', function(event) {
+      const home = event.target.closest('.logo a');
+      const menu = event.target.closest('.menu-icon');
+      const shop = event.target.closest('.collections .sqs-block-image-figure, .ctas .shop');
+      const view = event.target.closest('.collections .gallery-block, .product-image');
+      const register = event.target.closest('.ctas .register');
+      const contact = event.target.closest('.ctas .contact');
+
+
+      if (home || menu || shop || view || register || contact) {
+        cursor.classList.remove('active');
+      }
+    });
+
     // Add 'click' class to cursor on mouse down and remove on mouse up
     document.addEventListener("mousedown", (e) => cursor.classList.add("click"));
     document.addEventListener("mouseup", (e) => cursor.classList.remove("click"));
 
-    // Show custom cursor only over certain elements
-    [document.querySelector('.collections .gallery-block'), document.querySelector('.collections .sqs-block-image-figure'), document.querySelector('.footer .ctas'), document.querySelector('.header .menu-icon')].forEach(item => {
-      item?.addEventListener('mouseover', function () {
-        cursor.classList.add('active');
-      });
-
-      item?.addEventListener('mouseout', function () {
-        cursor.classList.remove('active');
-      });
-
-    })
-
-    // Customize cursor based on specific element
-    document.querySelector('.header .menu-icon').addEventListener('mouseover', function () {
-      cursor.classList.remove('view');
-      cursor.classList.remove('shop');
-      cursor.classList.remove('contact');
-      cursor.classList.remove('register');
-      cursor.classList.add('menu');
-    });
-
-    document.querySelector('.collections .gallery-block')?.addEventListener('mouseover', function () {
-      cursor.classList.remove('menu');
-      cursor.classList.remove('shop');
-      cursor.classList.remove('contact');
-      cursor.classList.remove('register');
-      cursor.classList.add('view');
-    });
-
-    document.querySelector('.footer .ctas .contact').addEventListener('mouseover', function () {
-      cursor.classList.remove('view');
-      cursor.classList.remove('menu');
-      cursor.classList.remove('shop');
-      cursor.classList.remove('register');
-      cursor.classList.add('contact');
-    });
-
-    document.querySelector('.footer .ctas .register').addEventListener('mouseover', function () {
-      cursor.classList.remove('view');
-      cursor.classList.remove('menu');
-      cursor.classList.remove('shop');
-      cursor.classList.remove('contact');
-      cursor.classList.add('register');
-    });
-
-    [document.querySelector('.collections .sqs-block-image-figure'), document.querySelector('.footer .ctas .shop')].forEach(item => {
-      item?.addEventListener('mouseover', function () {
-        cursor.classList.remove('menu');
-        cursor.classList.remove('view');
-        cursor.classList.remove('contact');
-        cursor.classList.remove('register');
-        cursor.classList.add('shop');
-      });
-    })
 
 // Position Images
 function convertDecimalsToPercentInBackgroundPosition() {
@@ -117,7 +103,7 @@ $(document).ready(function () {
 
 // SQUARESPACE IMAGE LOADER
 function loadAllImages() {
-  var images = document.querySelectorAll('div:not(.product-image) img[data-src]' );
+  var images = document.querySelectorAll('img[data-src]' );
   var filteredImages = Array.from(images).filter(img => {return !img.closest(`div.${excludedClass}`);});
 
   setTimeout(function() {

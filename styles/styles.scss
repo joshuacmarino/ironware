@@ -209,6 +209,11 @@
 					@include animate(0s);
 				}
 
+				.icon-home {
+					top: 1px;
+					left: 4px;
+				}
+
 				.icon-menu {
 					width: 26px;
 					height: 26px;
@@ -287,6 +292,11 @@
 				opacity: 0;
 				@include animate(0s);
 
+			}
+
+			&.home {
+				&:after { content: 'home'; }
+				.cursor-icon .icon-home { opacity: 1; }
 			}
 
 			&.view {
@@ -401,9 +411,11 @@
 				transform: scale(1);
 				@include no-select;
 
-				&:hover {
-					transform: scale(1.04);
-				}
+				@include cursor-none();
+
+				// &:hover {
+				// 	transform: scale(1.04);
+				// }
 			}
 		}
 
@@ -489,6 +501,10 @@
 
 					&:first-child {
 						margin: 40px 0 0 0;
+
+						li:first-child {
+							display: none;
+						}
 					}
 
 					&:last-child {
@@ -1312,6 +1328,7 @@
 				position: absolute;
 				top: unset;
 				bottom: 80px;
+				z-index: 10;
 			}
 
 			.nav-shop {
@@ -1620,69 +1637,53 @@
 
 			}
 
-			#product-content {
-				padding: 80px 0;
-				text-align: left;
-
-				.gallery-block {
-					display: block;
-					margin: 0 auto 20px;
-					width: 85%;
-
-
-					.sqs-gallery-container {
-						border-radius: 4px 4px 0 0;
-						overflow: hidden;
-					}
-
-					.sqs-gallery-thumbnails {
-						border-radius: 0 0 4px 4px;
-						overflow: hidden;
-					}
-				}
-
-				.html-block {
-					display: block;
-					margin: 0 auto 40px;
-					width: 80%;
-					max-width: 760px;
-				}
-
-				h1 {
-					margin: 1em 0 .5em;
-					@include fontsize(1.1em);
-					font-weight: 200;
-					letter-spacing: .05rem;
-				}
-
-				p {
-					display: inline-block;
-					margin: 0 0 1em 0;
-					font-family: $montserrat;
-					@include fontsize(.8rem, 2);
-					font-weight: 300;
-					letter-spacing: .01rem;
-				}
-			}
-
-			.section-title {
+			.ProductItem-related-label {
 				display: block;
 				width: 100%;
 				padding: 16px 0;
-				background-color: $clay;
+				background-color: rgba(137, 146, 151, .4);
+				color: $dark;
+				opacity: .7;
 				font-family: $montserrat;
 				@include fontsize(.6rem);
+				font-style: normal;
 				text-transform: uppercase;
 				letter-spacing: .04rem;
 				word-spacing: .1rem;
-				color: $white;
+			}
+		}
 
-				&.collection {
-					background-color: rgba(137, 146, 151, .4);
-					color: $dark;
-					opacity: .7;
+		.product-image {
+			@include cursor-none();
+
+			&:hover {
+				img {
+					opacity: 1 !important;
 				}
 			}
+		}
+
+		#productList{
+			.product {
+				.product-title {
+					margin: 1rem 0 1rem;
+					font-family: $crimson;
+					font-style: italic;
+					text-transform: uppercase;
+					letter-spacing: .02rem;
+					@include fontsize(.9rem);
+				}
+
+				.product-image {
+					img {
+						transform: scale(.7);
+					}
+
+				}
+			}
+		}
+		.product-price {
+			display: none !important;
 		}
 	}
 

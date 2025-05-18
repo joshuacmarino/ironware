@@ -234,6 +234,14 @@
       "oAP" : "\/blocks\/svg-icon-email.block",
       "oF" : 0
     },
+    "\/blocks\/svg-icon-home.block" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/svg-icon-home.block",
+      "oF" : 0
+    },
     "\/blocks\/svg-icon-magnify.block" : {
       "cB" : 0,
       "ft" : 8192,
