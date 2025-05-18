@@ -22,7 +22,7 @@
 <!-- Fix Member Limitations | https://forum.squarespace.com/topic/178175-member-areas-manual-account-creation-require-approval/ -->
 <script>
 function continuouslyWaitForElement(selector, callback) {
-	  if (window.location.href.includes('/ironware-insider-create-account-hidden')) {
+	  if (window.location.href.includes('/ironware-insiders-create-account-hidden')) {
 		console.log('Script execution skipped for this page.');
 		return; // Exit the function early
 	}
@@ -49,7 +49,7 @@ continuouslyWaitForElement('#user-account-login-root > div > div > footer > a:nt
 
 function isMainPage() {
 	// Adjust the condition based on your main page's URL
-	return window.location.pathname === '/' || window.location.pathname === '/index.html';
+	return window.location.pathname === '/' || window.location.pathname === '/home';
 }
 
 function pollAndHideIframeBasedOnSrc(iframeSelector, srcToCheck) {
