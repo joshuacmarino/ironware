@@ -49,7 +49,7 @@ continuouslyWaitForElement('#user-account-login-root > div > div > footer > a:nt
 
 function isMainPage() {
 	// Adjust the condition based on your main page's URL
-	return window.location.pathname === '/' || window.location.pathname === '/home';
+	return window.location.pathname === '/' || window.location.pathname === '/iron';
 }
 
 function pollAndHideIframeBasedOnSrc(iframeSelector, srcToCheck) {

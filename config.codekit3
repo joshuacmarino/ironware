@@ -178,6 +178,14 @@
       "oAP" : "\/blocks\/home.block",
       "oF" : 0
     },
+    "\/blocks\/insiders.block" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/blocks\/insiders.block",
+      "oF" : 0
+    },
     "\/blocks\/nav-footer.block" : {
       "cB" : 0,
       "ft" : 8192,
@@ -360,6 +368,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/home.region",
+      "oF" : 0
+    },
+    "\/insiders.region" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/insiders.region",
       "oF" : 0
     },
     "\/scripts\/accordion.js" : {

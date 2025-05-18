@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<!-- Head -->
+{@|apply head.block}
+
+<body id="{.section collection}{urlId}{.end}" class="{squarespace.page-classes} insiders">
+
+      <!-- Header -->
+      {@|apply header.block}
+
+      <!-- Default Page -->
+      {@|apply insiders.block}
+
+      <!-- Footer -->
+      {@|apply footer.block}
+
+      <!-- Javascript -->
+      {@|apply scripts.block}
+
+      <!-- Squarespace Footers -->
+      {squarespace-footers}
+
+</body>
+
+</html>

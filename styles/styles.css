@@ -1656,6 +1656,10 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   display: none !important;
 }
 
+.insiders .product-block {
+  display: none;
+}
+
 .grecaptcha-badge {
   display: none !important;
 }

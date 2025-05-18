@@ -1,0 +1,23 @@
+<!-- Page Header -->
+{.section collection}
+<section class="content-header content-fill" style="background-image: url('{mainImage.assetUrl}'); background-position: {mainImage.mediaFocalPoint.x} {mainImage.mediaFocalPoint.y};">
+
+      <!-- Page Title -->
+      <h1 class="page-title">{title}</h1>
+
+</section>
+{.end}
+
+<!-- Page Content -->
+<main class="page-content" data-content-field="main-content">
+
+      <div class="frame">
+
+            <!-- Squarespace Content -->
+            {squarespace.main-content}
+
+      </div>
+
+</main>
+
+
