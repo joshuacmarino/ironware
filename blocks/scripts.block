@@ -22,7 +22,7 @@
 <!-- Fix Member Limitations | https://forum.squarespace.com/topic/178175-member-areas-manual-account-creation-require-approval/ -->
 <script>
 function continuouslyWaitForElement(selector, callback) {
-	  if (window.location.href.includes('/account/login/create')) {
+	  if (window.location.href.includes('/ironware-insider-create-account-hidden')) {
 		console.log('Script execution skipped for this page.');
 		return; // Exit the function early
 	}
