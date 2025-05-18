@@ -9,7 +9,7 @@
       <!-- Header -->
       {@|apply header.block}
 
-      <!-- Default Page -->
+      <!-- Insiders Page -->
       {@|apply insiders.block}
 
       <!-- Footer -->
