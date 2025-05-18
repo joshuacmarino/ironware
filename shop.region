@@ -15,6 +15,7 @@
             <!-- Squarespace JSON Variables -->
             {.var @collection categoryFilter}
             {.var @productCategory item.categories.0}
+            {.var @productTitle item.title}
 
             {.if @collection || @productCategory}
                   <squarespace:query collection="collection-banners" tag="{@collection}" limit="1">
@@ -33,18 +34,20 @@
                   <h1 class="page-title">{title}</h1>
             {.end}
 
-            <!-- Store Breadcrumbs -->
-            <nav class="nav-shop">
-                  <ul class="breadcrumbs">
-                        <li><a href="../shop">Shop</a></li>
-                        {.if @productCategory}<li><a href="../shop?category={@productCategory}">{@productCategory}</a></li>{.or}
-                        {.if @collection}<li>{@collection}</li>{.end}
-                        {.end}
-                        {.if @productTitle}<li>{@productTitle}</li>{.end}
-                  </ul>
+                  <!-- Store Breadcrumbs -->
+                  <nav class="nav-shop">
+                        <ul class="breadcrumbs">
+                              <li><a href="../shop">Shop</a></li>
+                              {.if @productCategory}<li><a href="../shop?category={@productCategory}">{@productCategory}</a></li>{.or}
+                              {.if @collection}<li>{@collection}</li>{.end}
+                              {.end}
+                              {.if @productTitle}<li>{@productTitle}</li>{.end}
+                        </ul>
 
-                  <squarespace:block-field id="shop-search" columns="1"/>
-            </nav>
+                        <squarespace:block-field id="shop-search" columns="1"/>
+                  </nav>
+
+                  </section>
       {.end}
 
       <!-- Default Page -->
