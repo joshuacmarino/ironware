@@ -1266,7 +1266,7 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   opacity: 1;
 }
 
-.default .content-header, .shop .content-header {
+.default .content-header, .shop .content-header, .insiders .content-header {
   position: relative;
   height: 340px;
   padding: 0 0 60px 0;
@@ -1291,11 +1291,11 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-.default .content-header.showMenu, .shop .content-header.showMenu {
+.default .content-header.showMenu, .shop .content-header.showMenu, .insiders .content-header.showMenu {
   border-radius: 0 40px 0 0;
   transform: translateX(-360px);
 }
-.default .content-header:after, .shop .content-header:after {
+.default .content-header:after, .shop .content-header:after, .insiders .content-header:after {
   content: "";
   display: block;
   position: absolute;
@@ -1315,7 +1315,7 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.3) 60%);
   opacity: 0.8;
 }
-.default .content-header .page-title, .shop .content-header .page-title {
+.default .content-header .page-title, .shop .content-header .page-title, .insiders .content-header .page-title {
   display: block;
   color: rgb(255, 255, 255);
   width: 100%;
@@ -1324,7 +1324,7 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   bottom: 80px;
   z-index: 10;
 }
-.default .content-header nav, .shop .content-header nav {
+.default .content-header nav, .shop .content-header nav, .insiders .content-header nav {
   display: block;
   width: 100%;
   padding: 16px 60px;
@@ -1340,14 +1340,14 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   color: rgb(255, 255, 255);
   z-index: 10;
 }
-.default .content-header nav .breadcrumbs li, .shop .content-header nav .breadcrumbs li {
+.default .content-header nav .breadcrumbs li, .shop .content-header nav .breadcrumbs li, .insiders .content-header nav .breadcrumbs li {
   display: inline-block;
   position: relative;
   padding-right: 36px;
   float: left;
   color: rgb(255, 255, 255);
 }
-.default .content-header nav .breadcrumbs li:after, .shop .content-header nav .breadcrumbs li:after {
+.default .content-header nav .breadcrumbs li:after, .shop .content-header nav .breadcrumbs li:after, .insiders .content-header nav .breadcrumbs li:after {
   content: "";
   display: block;
   position: absolute;
@@ -1370,24 +1370,24 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   right: 12px;
   opacity: 0.4;
 }
-.default .content-header nav .breadcrumbs li:last-child:after, .shop .content-header nav .breadcrumbs li:last-child:after {
+.default .content-header nav .breadcrumbs li:last-child:after, .shop .content-header nav .breadcrumbs li:last-child:after, .insiders .content-header nav .breadcrumbs li:last-child:after {
   display: none;
 }
-.default .content-header nav .breadcrumbs li a, .shop .content-header nav .breadcrumbs li a {
+.default .content-header nav .breadcrumbs li a, .shop .content-header nav .breadcrumbs li a, .insiders .content-header nav .breadcrumbs li a {
   display: inline-block;
   color: rgb(255, 255, 255);
 }
-.default .content-header nav .breadcrumbs li:hover a, .shop .content-header nav .breadcrumbs li:hover a {
+.default .content-header nav .breadcrumbs li:hover a, .shop .content-header nav .breadcrumbs li:hover a, .insiders .content-header nav .breadcrumbs li:hover a {
   color: rgb(255, 147, 47);
 }
-.default .content-header nav #shop-search, .shop .content-header nav #shop-search {
+.default .content-header nav #shop-search, .shop .content-header nav #shop-search, .insiders .content-header nav #shop-search {
   position: absolute;
   top: 4px;
   right: 60px;
   display: none;
   visibility: hidden;
 }
-.default .page-content, .shop .page-content {
+.default .page-content, .shop .page-content, .insiders .page-content {
   position: relative;
   background: rgb(255, 255, 255);
   overflow: hidden;
@@ -1400,7 +1400,7 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   backface-visibility: hidden !important;
   perspective: 1000 !important;
 }
-.default .page-content.showMenu, .shop .page-content.showMenu {
+.default .page-content.showMenu, .shop .page-content.showMenu, .insiders .page-content.showMenu {
   transform: translateX(-360px);
 }
 
