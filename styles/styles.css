@@ -463,7 +463,7 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
 .nav-header .nav-frame li.folder:first-child li:first-child {
   display: none;
 }
-.nav-header .nav-frame li.folder:last-child ul li {
+.nav-header .nav-frame li.folder:nth-of-type(4) ul li {
   display: none;
 }
 .nav-header .nav-frame li.folder li a {

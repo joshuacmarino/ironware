@@ -504,12 +504,16 @@
 						}
 					}
 
-					&:last-child {
+					&:nth-of-type(4) {
 						ul {
 							li {
 								display: none;
 							}
 						}
+					}
+
+					&:last-child {
+
 					}
 
 					li {
