@@ -1266,15 +1266,11 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   opacity: 1;
 }
 
-.default .page-content {
-  min-height: 400px;
-}
-
-.shop .content-header {
+.default .content-header, .shop .content-header {
   position: relative;
   height: 340px;
   padding: 0 0 60px 0;
-  background-color: rgb(99, 92, 80);
+  background-color: rgb(33, 33, 33);
   background-repeat: none;
   background-position: center;
   background-size: 110%;
@@ -1295,11 +1291,11 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-.shop .content-header.showMenu {
+.default .content-header.showMenu, .shop .content-header.showMenu {
   border-radius: 0 40px 0 0;
   transform: translateX(-360px);
 }
-.shop .content-header:after {
+.default .content-header:after, .shop .content-header:after {
   content: "";
   display: block;
   position: absolute;
@@ -1319,7 +1315,7 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.3) 60%);
   opacity: 0.8;
 }
-.shop .content-header .page-title {
+.default .content-header .page-title, .shop .content-header .page-title {
   display: block;
   color: rgb(255, 255, 255);
   width: 100%;
@@ -1328,7 +1324,7 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   bottom: 80px;
   z-index: 10;
 }
-.shop .content-header .nav-shop {
+.default .content-header nav, .shop .content-header nav {
   display: block;
   width: 100%;
   padding: 16px 60px;
@@ -1344,14 +1340,14 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   color: rgb(255, 255, 255);
   z-index: 10;
 }
-.shop .content-header .nav-shop .breadcrumbs li {
+.default .content-header nav .breadcrumbs li, .shop .content-header nav .breadcrumbs li {
   display: inline-block;
   position: relative;
   padding-right: 36px;
   float: left;
   color: rgb(255, 255, 255);
 }
-.shop .content-header .nav-shop .breadcrumbs li:after {
+.default .content-header nav .breadcrumbs li:after, .shop .content-header nav .breadcrumbs li:after {
   content: "";
   display: block;
   position: absolute;
@@ -1374,24 +1370,24 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   right: 12px;
   opacity: 0.4;
 }
-.shop .content-header .nav-shop .breadcrumbs li:last-child:after {
+.default .content-header nav .breadcrumbs li:last-child:after, .shop .content-header nav .breadcrumbs li:last-child:after {
   display: none;
 }
-.shop .content-header .nav-shop .breadcrumbs li a {
+.default .content-header nav .breadcrumbs li a, .shop .content-header nav .breadcrumbs li a {
   display: inline-block;
   color: rgb(255, 255, 255);
 }
-.shop .content-header .nav-shop .breadcrumbs li:hover a {
+.default .content-header nav .breadcrumbs li:hover a, .shop .content-header nav .breadcrumbs li:hover a {
   color: rgb(255, 147, 47);
 }
-.shop .content-header .nav-shop #shop-search {
+.default .content-header nav #shop-search, .shop .content-header nav #shop-search {
   position: absolute;
   top: 4px;
   right: 60px;
   display: none;
   visibility: hidden;
 }
-.shop .page-content {
+.default .page-content, .shop .page-content {
   position: relative;
   background: rgb(255, 255, 255);
   overflow: hidden;
@@ -1404,9 +1400,10 @@ body.showMenu .cursor.menu .cursor-icon .icon-menu {
   backface-visibility: hidden !important;
   perspective: 1000 !important;
 }
-.shop .page-content.showMenu {
+.default .page-content.showMenu, .shop .page-content.showMenu {
   transform: translateX(-360px);
 }
+
 .shop .page-content #productNav, .shop .page-content .product-quantity-input {
   display: none !important;
 }

@@ -1,17 +1,9 @@
 <!-- Page Header -->
 {.section collection}
-<section class="content-header content-fill">
-
-      <!-- Page Thumbnail -->
-      {.section mainImage}
-      <img {@|image-meta} />
-      {.end}
+<section class="content-header content-fill" style="background-image: url('{mainImage.assetUrl}'); background-position: {mainImage.mediaFocalPoint.x} {mainImage.mediaFocalPoint.y};">
 
       <!-- Page Title -->
       <h1 class="page-title">{title}</h1>
-
-      <!-- Page Submenu -->
-      <squarespace:folder-navigation template="nav-submenu" />
 
 </section>
 {.end}
@@ -27,3 +19,5 @@
       </div>
 
 </main>
+
+

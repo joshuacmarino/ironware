@@ -15,7 +15,7 @@
 	$rust: rgba(222, 117, 20, 1);		  // #DE7514
 	$light-rust: rgba(255, 147, 47, 1);  // #FF922E
 
-// TYPEFACES ///////////////////////////////////////////////////////
+// TYPEFACES /////////////////////////////////////////////////////
 
 	$crimson: 'Crimson Text', Georgia, serif;
 	$montserrat: 'Montserrat', Helvetica, Arial, sans-serif;
@@ -121,10 +121,7 @@
 		cursor: none !important;
 	}
 
-
-
-
-// STYLES //////////////////////////////////////////////////////
+// STYLES ///////////////////////////////////////////////////////
 
 	// Global
 	html {
@@ -883,7 +880,7 @@
 
 	}
 
-	// Home
+	// Home Page Template
 	.home {
 		.page-content {
 			position: relative;
@@ -1284,22 +1281,14 @@
 		}
 	}
 
-	// Default
-	.default {
-		.page-content {
-			min-height: 400px;
-
-		}
-	}
-
-	// Shop
-	.shop {
+	// All Page Templates
+	.default, .shop {
 
 		.content-header {
 			position: relative;
 			height: 340px;
 			padding: 0 0 60px 0;
-			background-color: $clay;
+			background-color: $very-dark;
 			background-repeat: none;
 			background-position: center;
 			background-size: 110%;
@@ -1331,7 +1320,7 @@
 				z-index: 10;
 			}
 
-			.nav-shop {
+			nav {
 				display: block;
 				width: 100%;
 				padding: 16px 60px;
@@ -1391,7 +1380,6 @@
 				}
 			}
 
-
 		}
 
 		.page-content {
@@ -1405,6 +1393,19 @@
 			&.showMenu {
 				transform: translateX(-360px);
 			}
+		}
+	}
+
+	// Default Page Template
+	.default {
+
+
+	}
+
+	// Shop Page Template
+	.shop {
+
+		.page-content {
 
 			#productNav, .product-quantity-input {
 				display: none !important;
@@ -1686,8 +1687,6 @@
 			display: none !important;
 		}
 	}
-
-
 
 // SQUARESPACE //////////////////////////////////////////////////
 .grecaptcha-badge {

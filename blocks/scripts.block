@@ -18,3 +18,62 @@
 
 <!-- CMS Tools | squarewebsites.org -->
 <script async src="https://assets.squarewebsites.org/sqstools-ext/themes/init.js"></script>
+
+<!-- Fix Member Limitations | https://forum.squarespace.com/topic/178175-member-areas-manual-account-creation-require-approval/ -->
+<script>
+function continuouslyWaitForElement(selector, callback) {
+	  if (window.location.href.includes('/account/login/create')) {
+		console.log('Script execution skipped for this page.');
+		return; // Exit the function early
+	}
+
+	let lastElementFound = null;
+
+	let intervalId = setInterval(() => {
+		const iframe = document.querySelector('#accountFrame');
+		if (iframe) {
+			const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+			const element = iframeDocument.querySelector(selector);
+			if (element && element !== lastElementFound) {
+				callback(element);
+				lastElementFound = element; // Update the last element found
+			}
+		}
+	}, 100); // Check every 100ms
+}
+
+continuouslyWaitForElement('#user-account-login-root > div > div > footer > a:nth-child(2)', function(element) {
+	element.style.display = 'none';
+	console.log('Element hidden again');
+});
+
+function isMainPage() {
+	// Adjust the condition based on your main page's URL
+	return window.location.pathname === '/' || window.location.pathname === '/index.html';
+}
+
+function pollAndHideIframeBasedOnSrc(iframeSelector, srcToCheck) {
+	if (!isMainPage()) {
+		console.log('Not on the main page, skipping script.');
+		return; // Exit if not on the main page
+	}
+
+	const intervalId = setInterval(() => {
+		const iframes = document.querySelectorAll(iframeSelector);
+		iframes.forEach((iframe) => {
+			if (iframe.src.includes(srcToCheck)) {
+				iframe.style.display = 'none'; // Hide the iframe
+				console.log(`Iframe with src ${srcToCheck} was hidden.`);
+			}
+		});
+
+		// Consider if you need to clear the interval based on your requirements
+		// For continuous checking, you might leave it running
+		// clearInterval(intervalId); // Uncomment if you want to stop polling after the first check
+	}, 100); // Check every 100ms
+}
+
+pollAndHideIframeBasedOnSrc('#accountFrame', '/account/frame/login/create');
+
+
+</script>
