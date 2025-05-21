@@ -1,6 +1,6 @@
 <!-- Page Header -->
 {.section collection}
-<section class="content-header content-fill" style="background-image: {.main-image?}url('{mainImage.assetUrl}');{.or} url('https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/09413477-f0d0-438f-9f31-fe2c4fae9e68/shop-bg.jpg');{.end} background-position: {mainImage.mediaFocalPoint.x} {mainImage.mediaFocalPoint.y};">
+<section class="content-header content-fill" style="background-image: {.main-image?}url('{mainImage.assetUrl}');{.or} url('https://images.squarespace-cdn.com/content/v1/67e3025f62434c05515ab832/faf3ade3-1758-4bc5-a97b-ae591b707d23/120524_IWI_09_0566R.jpg');{.end} background-position: {mainImage.mediaFocalPoint.x} {mainImage.mediaFocalPoint.y};">
 
       <!-- Page Title -->
       <h1 class="page-title">{title}</h1>

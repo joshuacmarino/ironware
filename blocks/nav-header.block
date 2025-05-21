@@ -45,6 +45,11 @@
 
   {.end}
 
+  <li>
+    {@|apply svg-icon-user.block}
+    <a href="../ironware-insiders">Login</a>
+  </li>
+
   </ul>
 
 </nav>
