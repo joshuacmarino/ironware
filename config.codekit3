@@ -354,6 +354,14 @@
       "oAP" : "\/collections\/page.conf",
       "oF" : 0
     },
+    "\/debug.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/debug-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/default.region" : {
       "cB" : 0,
       "ft" : 8192,
@@ -487,14 +495,6 @@
       "oA" : 0,
       "oAP" : "\/template.conf",
       "oF" : 0
-    },
-    "\/untitled.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/untitled-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
     }
   },
   "hooks" : [
