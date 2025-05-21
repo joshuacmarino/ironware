@@ -112,7 +112,7 @@ function loadAllImages() {
       ImageLoader.load(filteredImages[i], {load: true});
     }
 
-  }, 500);
+  }, 700);
 
 }
 

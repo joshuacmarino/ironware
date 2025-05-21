@@ -5,6 +5,13 @@
       <!-- Page Title -->
       <h1 class="page-title">{title}</h1>
 
+      <!-- Insiders Breadcrumbs -->
+      <nav class="nav-insiders">
+            <ul class="breadcrumbs">
+                  <li><a href="../ironware-insiders">Dashboard</a></li>
+            </ul>
+      </nav>
+
 </section>
 {.end}
 
